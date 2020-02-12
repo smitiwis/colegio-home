@@ -1,0 +1,32 @@
+.clsp-post-list .item {
+    position: relative;
+    min-height: 117px;
+}
+.clsp-post-list .item .img-container {
+    position: absolute;
+	float: left;
+	width: 99px;
+}
+.clsp-post-list .item .data {
+	margin-left: 118px;
+}
+.clsp-post-list .item .meta-data {
+    margin-bottom: 6px;
+}
+.clsp-post-list .item .meta-data .date,
+.clsp-post-list .item .meta-data .author {
+	font-size: 12px;
+}
+.clsp-post-list .item .meta-data .author {
+	font-style: italic;
+}
+.clsp-post-list .item .data h1,
+.clsp-post-list .item .data h2,
+.clsp-post-list .item .data h3,
+.clsp-post-list .item .data h4,
+.clsp-post-list .item .data h5,
+.clsp-post-list .item .data h6 {
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 6px;
+}

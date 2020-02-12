@@ -1,0 +1,236 @@
+/*
+Plugin Name: Wordpress Mega Pack for News, Blog and Magazine - All you need
+Author: Ad-theme.com
+*/
+
+.wpmp-clear {
+	clear:both;
+}
+
+.wpmegapack_vc.wpmegapack_vc-columns-1 .wpmegapack_vc-item {
+	max-width: 100%;
+}
+
+.wpmegapack_vc.wpmegapack_vc-columns-2 .wpmegapack_vc-item {
+	max-width: 48%;
+	max-width: -webkit-calc(50% - 4px);
+	max-width:         calc(50% - 4px);
+}
+
+.wpmegapack_vc.wpmegapack_vc-columns-3 .wpmegapack_vc-item {
+	max-width: 32%;
+	max-width: -webkit-calc(33.3% - 4px);
+	max-width:         calc(33.3% - 4px);
+}
+
+.wpmegapack_vc.wpmegapack_vc-columns-4 .wpmegapack_vc-item {
+	max-width: 23%;
+	max-width: -webkit-calc(25% - 4px);
+	max-width:         calc(25% - 4px);
+}
+
+.wpmegapack_vc.wpmegapack_vc-columns-5 .wpmegapack_vc-item {
+	max-width: 19%;
+	max-width: -webkit-calc(20% - 4px);
+	max-width:         calc(20% - 4px);
+}
+
+.wpmegapack_vc.wpmegapack_vc-columns-6 .wpmegapack_vc-item {
+	max-width: 15%;
+	max-width: -webkit-calc(16.7% - 4px);
+	max-width:         calc(16.7% - 4px);
+}
+
+.wpmegapack_vc.wpmegapack_vc-columns-7 .wpmegapack_vc-item {
+	max-width: 13%;
+	max-width: -webkit-calc(14.28% - 4px);
+	max-width:         calc(14.28% - 4px);
+}
+
+.wpmegapack_vc.wpmegapack_vc-columns-8 .wpmegapack_vc-item {
+	max-width: 11%;
+	max-width: -webkit-calc(12.5% - 4px);
+	max-width:         calc(12.5% - 4px);
+}
+
+.wpmegapack_vc.wpmegapack_vc-columns-9 .wpmegapack_vc-item {
+	max-width: 9%;
+	max-width: -webkit-calc(11.1% - 4px);
+	max-width:         calc(11.1% - 4px);
+}
+@media only screen and (min-width : 1025px) {
+	.wpmegapack_vc.wpmegapack_vc-columns-1 .wpmegapack_vc-item:nth-of-type(1n),
+	.wpmegapack_vc.wpmegapack_vc-columns-2 .wpmegapack_vc-item:nth-of-type(2n),
+	.wpmegapack_vc.wpmegapack_vc-columns-3 .wpmegapack_vc-item:nth-of-type(3n),
+	.wpmegapack_vc.wpmegapack_vc-columns-4 .wpmegapack_vc-item:nth-of-type(4n),
+	.wpmegapack_vc.wpmegapack_vc-columns-5 .wpmegapack_vc-item:nth-of-type(5n),
+	.wpmegapack_vc.wpmegapack_vc-columns-6 .wpmegapack_vc-item:nth-of-type(6n),
+	.wpmegapack_vc.wpmegapack_vc-columns-7 .wpmegapack_vc-item:nth-of-type(7n),
+	.wpmegapack_vc.wpmegapack_vc-columns-8 .wpmegapack_vc-item:nth-of-type(8n),
+	.wpmegapack_vc.wpmegapack_vc-columns-9 .wpmegapack_vc-item:nth-of-type(9n) {
+		margin-right: 0!important;
+	}
+}
+.wpmegapack_vc.wpmegapack_vc-columns-1.gallery-size-medium figure.wpmegapack_vc-item:nth-of-type(1n+1),
+.wpmegapack_vc.wpmegapack_vc-columns-1.gallery-size-thumbnail figure.wpmegapack_vc-item:nth-of-type(1n+1),
+.wpmegapack_vc.wpmegapack_vc-columns-2.gallery-size-thumbnail figure.wpmegapack_vc-item:nth-of-type(2n+1),
+.wpmegapack_vc.wpmegapack_vc-columns-3.gallery-size-thumbnail figure.wpmegapack_vc-item:nth-of-type(3n+1) {
+	clear: left;
+}
+
+/* COLUMN */
+.wpmegapack_vc .ad_one_one{ width:100%; }
+.wpmegapack_vc .ad_one_half{ width:50%; }
+.wpmegapack_vc .ad_one_third{ width:33.33%; }
+.wpmegapack_vc .ad_two_third{ width:66.66%; }
+.wpmegapack_vc .ad_one_fourth{ width:25%; }
+.wpmegapack_vc .ad_three_fourth{ width:75%; }
+.wpmegapack_vc .ad_one_fifth{ width:20%; }
+.wpmegapack_vc .ad_two_fifth{ width:40%; }
+.wpmegapack_vc .ad_three_fifth{ width:60%; }
+.wpmegapack_vc .ad_four_fifth{ width:80%; }
+.wpmegapack_vc .ad_one_sixth{ width:16.66%; }
+.wpmegapack_vc .ad_five_sixth{ width:83.33%; }
+.wpmegapack_vc .ad_one_half, 
+.wpmegapack_vc .ad_one_third,
+.wpmegapack_vc .ad_two_third,
+.wpmegapack_vc .ad_three_fourth,
+.wpmegapack_vc .ad_one_fourth,
+.wpmegapack_vc .ad_one_fifth,
+.wpmegapack_vc .ad_two_fifth,
+.wpmegapack_vc .ad_three_fifth,
+.wpmegapack_vc .ad_four_fifth,
+.wpmegapack_vc .ad_one_sixth,
+.wpmegapack_vc .ad_five_sixth{ 
+	position:relative;
+	float:left; 
+}
+.wpmegapack_vc .ad_last{ 
+	margin-right:0 !important; 
+	clear:right; 
+} 
+.adclear {
+	clear:both;
+}
+
+/* COLUMNS SHORTCODES */
+.admp_one_half{ width:48%; }
+.admp_one_third{ width:30.66%; }
+.admp_two_third{ width:65.33%; }
+.admp_one_fourth{ width:22%; }
+.admp_three_fourth{ width:74%; }
+.admp_one_fifth{ width:16.8%; }
+.admp_two_fifth{ width:37.6%; }
+.admp_three_fifth{ width:58.4%; }
+.admp_four_fifth{ width:67.2%; }
+.admp_one_sixth{ width:13.33%; }
+.admp_five_sixth{ width:82.67%; }
+.admp_one_half, 
+.admp_one_third,
+.admp_two_third,
+.admp_three_fourth,
+.admp_one_fourth,
+.admp_one_fifth,
+.admp_two_fifth,
+.admp_three_fifth,
+.admp_four_fifth,
+.admp_one_sixth,
+.admp_five_sixth{ 
+	position:relative; 
+	margin-right:3.7%; 
+	float:left; 
+}
+.admp_last{ 
+	margin-right:0 !important; 
+	clear:right; 
+} 
+
+/* MEDIA QUERY RESPONSIVE */
+@media screen and (max-width: 767px) {
+	.wpmegapack_vc .admp-columns-1,
+	.wpmegapack_vc .admp-columns-2,
+	.wpmegapack_vc .admp-columns-3,
+	.wpmegapack_vc .admp-columns-4,
+	.wpmegapack_vc .admp-columns-5,
+	.wpmegapack_vc .admp-columns-6,	
+	.wpmegapack_vc .admp-columns-7,
+	.wpmegapack_vc .admp-columns-8,	
+	.wpmegapack_vc .admp-columns-9,
+	.wpmegapack_vc .ad_one_half, 
+	.wpmegapack_vc .ad_one_third,
+	.wpmegapack_vc .ad_two_third,
+	.wpmegapack_vc .ad_three_fourth,
+	.wpmegapack_vc .ad_one_fourth,
+	.wpmegapack_vc .ad_one_fifth,
+	.wpmegapack_vc .ad_two_fifth,
+	.wpmegapack_vc .ad_three_fifth,
+	.wpmegapack_vc .ad_four_fifth,
+	.wpmegapack_vc .ad_one_sixth,
+	.wpmegapack_vc .ad_five_sixth {
+		max-width: 100%!important;
+		float:none!important;
+		width:100%!important;
+	}
+	
+/* COLUMNS SHORTCODES */
+	.admp_one_half, 
+	.admp_one_third,
+	.admp_two_third,
+	.admp_three_fourth,
+	.admp_one_fourth,
+	.admp_one_fifth,
+	.admp_two_fifth,
+	.admp_three_fifth,
+	.admp_four_fifth,
+	.admp_one_sixth,
+	.admp_five_sixth {
+		max-width: 100%!important;
+		float:none!important;
+		width:100%!important;
+	}	
+	
+}
+/* TABLET PORTRAIT */
+@media (min-device-width: 768px) and (max-device-width: 800px) and (orientation: portrait) { 
+	.wpmegapack_vc .admp-columns-1,
+	.wpmegapack_vc .admp-columns-2,
+	.wpmegapack_vc .admp-columns-3,
+	.wpmegapack_vc .admp-columns-4,
+	.wpmegapack_vc .admp-columns-5,
+	.wpmegapack_vc .admp-columns-6,	
+	.wpmegapack_vc .admp-columns-7,
+	.wpmegapack_vc .admp-columns-8,	
+	.wpmegapack_vc .admp-columns-9,
+	.wpmegapack_vc .ad_one_half, 
+	.wpmegapack_vc .ad_one_third,
+	.wpmegapack_vc .ad_two_third,
+	.wpmegapack_vc .ad_three_fourth,
+	.wpmegapack_vc .ad_one_fourth,
+	.wpmegapack_vc .ad_one_fifth,
+	.wpmegapack_vc .ad_two_fifth,
+	.wpmegapack_vc .ad_three_fifth,
+	.wpmegapack_vc .ad_four_fifth,
+	.wpmegapack_vc .ad_one_sixth,
+	.wpmegapack_vc .ad_five_sixth {
+		max-width: 48.5%!important;
+		width:48.5%!important;
+		margin-right:1%;
+	}
+
+/* SHORTCODES COLUMNS */	
+	.admp_one_half, 
+	.admp_one_third,
+	.admp_two_third,
+	.admp_three_fourth,
+	.admp_one_fourth,
+	.admp_one_fifth,
+	.admp_two_fifth,
+	.admp_three_fifth,
+	.admp_four_fifth,
+	.admp_one_sixth,
+	.admp_five_sixth {
+		max-width: 48.5%!important;
+		width:48.5%!important;
+		margin-right:1%;
+	}	
+}
