@@ -3,3 +3,30 @@
 body {
  background-color: yellow !important;
 }
+
+.separadores{
+    background-color: #B00817;
+    color: white;
+    margin: 5px 0px;
+    padding: 10px;
+    font-size: 20px;
+}
+.linea_separador{
+    //margin-top: 58px;
+    margin: 5px 0px;
+    border: solid #B00817 2px;
+    width: 100%;
+}
+.linea_h5{
+    
+    border: solid #B00817 2px;
+    width: 100%;
+    margin: 0px;
+}
+.normas_img{
+    border: solid #B00817 4px;
+}
+.boton_Alum_Padre:hover{
+    background-color:  #8A0814;
+    color: white;
+}
