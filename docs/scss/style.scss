@@ -1,34 +1,41 @@
 @import "./_libs.scss";
+@import './helpers/index';
+@import './sections/index';
 
-$color_colegio: #B00817;
 
 body {
- background-color: yellow !important;
+  background-color: yellow !important;
 }
 
-.separadores{
-    background-color: color_colegio;
-    color: white;
-    margin: 5px 0px;
-    padding: 10px;
-    font-size: 20px;
+.separadores {
+  background-color: $red;
+  color: white;
+  margin: 5px 0px;
+  padding: 10px;
+  font-size: 20px;
 }
-.linea_separador{
-    //margin-top: 58px;
-    margin: 5px 0px;
-    border: solid color_colegio 2px;
-    width: 100%;
+
+.linea_separador {
+  //margin-top: 58px;
+  margin: 5px 0px;
+  border: solid $red 2px;
+  width: 100%;
 }
-.linea_h5{
-    
-    border: solid color_colegio 2px;
-    width: 100%;
-    margin: 0px;
+
+.linea_h5 {
+
+  border: solid $red 2px;
+  width: 100%;
+  margin: 0px;
 }
-.normas_img{
-    border: solid color_colegio 4px;
+
+.normas_img {
+  border: solid $red 4px;
 }
-.boton_Alum_Padre:hover{
-    background-color:  rgb(255, 255, 255);
-    color: color_colegio;
+
+.boton_Alum_Padre:hover {
+  background-color: rgb(255, 255, 255);
+  color: $red;
 }
+
+
