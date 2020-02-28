@@ -27,7 +27,8 @@
 
    <!-- SCRIPTS-->
    <script src='wp-content/plugins/LayerSlider/static/js/greensockcd11.js?ver=1.11.8'></script>
-   <script src='wp-includes/js/jquery/jqueryb8ff.js?ver=1.12.4'></script>
+   <!-- JQUERY -->
+   <script src='wp-includes/js/jquery/jqueryb8ff.js'></script>
    <script src='wp-content/plugins/LayerSlider/static/js/layerslider.kreaturamedia.jquery76f9.js?ver=5.6.8'></script>
    <script src='wp-content/plugins/LayerSlider/static/js/layerslider.transitions76f9.js?ver=5.6.8'></script>
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
@@ -39,11 +40,11 @@
 <body
    class="home page-template page-template-page-fullwidth-with-slider page-template-page-fullwidth-with-slider-php page page-id-3491 wpb-js-composer js-comp-ver-5.0.1 vc_responsive">
 
-   <div style="background-color: #B00D0F;" class="cbp-row cbp_widget_row ch-header ch-sticky-header-enabled">
-      <!-- ESTE ES EL NAV DE LA PAGINA -->
+   <!-- ESTE ES EL NAV DE LA PAGINA -->
 
+   <div style="background-color: #B00D0F;" class="fixed-top cbp-row cbp_widget_row ch-header ch-sticky-header-enabled">
       <div class="container">
-         <nav class=" navbar navbar-expand-lg navbar-customize py-0 " >
+         <nav class=" navbar navbar-expand-lg navbar-customize py-0 ">
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -51,7 +52,7 @@
             </button>
 
 
-            <div class="collapse navbar-collapse my-2 my-lg-0" id="navbarSupportedContent" >
+            <div class="collapse navbar-collapse my-2 my-lg-0" id="navbarSupportedContent">
                <a class="navbar-brand mr-auto mt-0" href="./index.html">
                   <img class="logo_menu" src="./wp-content/uploads/imagenesColegio/logocolegio.png" alt="">
                </a>
@@ -60,21 +61,22 @@
                      <a class="nav-link" href="./index.html">Inicio <span class="sr-only">(current)</span></a>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link" href="./nosotros.htmls">Nosotros</a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link" href="./nosotros.htmls">Nosotros</a>
+                     <a class="nav-link" href="./nosotros.html">Nosotros</a>
                   </li>
                   <li class="nav-item">
                      <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Contáctanos</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="./intran.html">Intranet</a>
                   </li>
                </ul>
          </nav>
       </div>
    </div>
+
    <!-- ESTE ES EL SLIDER DE IMAGENES DE LA PAGINA -->
 
-   <div class="ls-wp-fullwidth-container" style="height:550px; background-color: #B00D0F;">
+   <div class="ls-wp-fullwidth-container" style="height:550px; background-color: #B00D0F; margin-top: 97px;">
       <div class="ls-wp-fullwidth-helper">
          <div id="layerslider_1" class="ls-wp-container"
             style="width:100%;height:550px;margin:0 auto;margin-bottom: 0px;">
