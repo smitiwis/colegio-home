@@ -7166,6 +7166,14 @@ a.text-dark:hover, a.text-dark:focus {
     .circle-star-texts span {
       color: #B00817; }
 
+.navbar-customize .nav-item {
+  padding: 0 12px; }
+
+.navbar-customize .nav-item .nav-link {
+  color: #ffffff !important;
+  font-weight: bold;
+  font-size: 18px; }
+
 body {
   background-color: yellow !important; }
 
@@ -7206,3 +7214,22 @@ body {
   margin-bottom: 1em;
   margin-left: 40px;
   margin-right: 40px; }
+
+.card-testimonial {
+  border: none;
+  position: relative;
+  background-color: transparent; }
+  .card-testimonial .card-body {
+    background-color: transparent;
+    z-index: 10; }
+  .card-testimonial--second::after {
+    content: "";
+    display: block;
+    width: 100%;
+    background-color: #B00817;
+    height: 100%;
+    position: absolute;
+    width: 200%;
+    z-index: 5; }
+  .card-testimonial .fa-quote-left, .card-testimonial .fa-quote-right {
+    font-size: 30px; }

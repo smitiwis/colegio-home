@@ -1,0 +1,13 @@
+.navbar {
+    &-customize {
+        .nav-item  {
+            padding: 0 12px;
+        }
+        .nav-item .nav-link {
+            color: $white !important;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+    }
+} 
