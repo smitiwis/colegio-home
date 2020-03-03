@@ -81,5 +81,41 @@ body {
   }
 }
 .testimonios{
-  background-color: rgb(150, 10, 12);
+  background-color: $red;
+}
+//REDES SOCIALES
+.nav-RS{
+  ul{
+    display:flex; margin: 5px;
+    li{
+      a{
+        text-decoration: none;
+        i{
+          font-size: 30px; 
+          margin: 0px 5px; 
+          color:$red; 
+          border: solid $white 1px; 
+          border-radius:50%; 
+          background-color: $white; 
+        }
+        .facebook {
+          color: #3b5998;
+          cursor: pointer;
+        }
+        .google {
+            color: #db4a39;
+        }
+        .youtube {
+            color: red;
+        }
+        .twitter {
+            color: #00acee;
+        }
+        :hover{
+          color:#B00D0F;
+          border: solid #B00D0F 1px;
+      }
+      }
+    }
+  }
 }

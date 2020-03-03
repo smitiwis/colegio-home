@@ -7177,7 +7177,7 @@ a.text-dark:hover, a.text-dark:focus {
   font-size: 18px; }
 
 .navbar-customize .nav-item:hover {
-  background-color: #d82121;
+  background-color: #f80c0c;
   border-radius: 5px; }
 
 .navbar .logo_menu {
@@ -7217,6 +7217,48 @@ figure {
   border-radius: 50%;
   border: solid red 2px;
   filter: drop-shadow(0px 0px 15px #B00D0F); }
+
+.boton_form {
+  background-color: #B00D0F;
+  border: #B00D0F;
+  padding: 10px 15px; }
+
+.boton_form:hover {
+  background-color: red;
+  border: red;
+  color: #ffffff; }
+
+fieldset {
+  border: solid #B00D0F; }
+  fieldset .legend {
+    width: auto;
+    text-align: center;
+    padding: 0px 15px; }
+    fieldset .legend i {
+      font-size: 55px;
+      background-color: #B00D0F;
+      border-radius: 50%;
+      padding: 15px;
+      color: white; }
+  fieldset div {
+    text-align: center; }
+
+.redes_sociales div a {
+  text-decoration: none; }
+  .redes_sociales div a i {
+    font-size: 59px;
+    color: #B00D0F; }
+  .redes_sociales div a .facebook {
+    color: #3b5998;
+    cursor: pointer; }
+  .redes_sociales div a .google {
+    color: #db4a39; }
+  .redes_sociales div a .youtube {
+    color: red; }
+  .redes_sociales div a .twitter {
+    color: #00acee; }
+  .redes_sociales div a :hover {
+    color: #B00D0F; }
 
 body {
   background-color: white !important; }
@@ -7279,4 +7321,29 @@ body {
     font-size: 30px; }
 
 .testimonios {
-  background-color: #960a0c; }
+  background-color: #B00D0F; }
+
+.nav-RS ul {
+  display: flex;
+  margin: 5px; }
+  .nav-RS ul li a {
+    text-decoration: none; }
+    .nav-RS ul li a i {
+      font-size: 30px;
+      margin: 0px 5px;
+      color: #B00D0F;
+      border: solid #ffffff 1px;
+      border-radius: 50%;
+      background-color: #ffffff; }
+    .nav-RS ul li a .facebook {
+      color: #3b5998;
+      cursor: pointer; }
+    .nav-RS ul li a .google {
+      color: #db4a39; }
+    .nav-RS ul li a .youtube {
+      color: red; }
+    .nav-RS ul li a .twitter {
+      color: #00acee; }
+    .nav-RS ul li a :hover {
+      color: #B00D0F;
+      border: solid #B00D0F 1px; }
