@@ -27,10 +27,10 @@ figure{
     width: 70%;
     border-radius: 50%;
     border: solid $red 1px;
-    filter: drop-shadow(0px 0px 15px red);
+    filter: drop-shadow(0px 0px 5px red);
 }
 .img_docente:hover{
     border-radius: 50%;
     border: solid red 2px;
-    filter: drop-shadow(0px 0px 15px $red);
+    filter: drop-shadow(0px 0px 8px $red);
 }
