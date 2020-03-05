@@ -1,0 +1,32 @@
+.boton {
+    background-color: #B00D0F;
+    color: white;
+    padding: 10px 15px;
+    border: #B00D0F;
+    border-radius: 10px;
+}
+
+.boton:hover {
+    background-color: red;
+}
+
+section {
+    border: solid #B00D0F 3px;
+}
+
+img {
+    width: 250px;
+}
+
+figure {
+    margin-bottom: 15px;
+}
+hr{
+    border: solid  #B00D0F 2px; 
+    width: 100%;
+    margin-top: 0px;
+}
+.icono{
+    font-size: 30px;
+     color: #B00D0F;
+}
