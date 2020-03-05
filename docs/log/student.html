@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	<title>Admin</title>
+	<title>Student</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<link rel="stylesheet" href="./css/main.css">
@@ -135,7 +135,7 @@
 		<!-- Content page -->
 		<div class="container-fluid">
 			<div class="page-header">
-			  <h1 class="text-titles"><i class="zmdi zmdi-account zmdi-hc-fw"></i> Users <small>Admin</small></h1>
+			  <h1 class="text-titles"><i class="zmdi zmdi-face zmdi-hc-fw"></i> Users <small>Student</small></h1>
 			</div>
 			<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse voluptas reiciendis tempora voluptatum eius porro ipsa quae voluptates officiis sapiente sunt dolorem, velit quos a qui nobis sed, dignissimos possimus!</p>
 		</div>
@@ -152,6 +152,7 @@
 								<div class="row">
 									<div class="col-xs-12 col-md-10 col-md-offset-1">
 									    <form action="">
+									    	<fieldset>Student Data</fieldset>
 									    	<div class="form-group label-floating">
 											  <label class="control-label">Name</label>
 											  <input class="form-control" type="text">
@@ -173,12 +174,50 @@
 											  <input class="form-control" type="text">
 											</div>
 											<div class="form-group">
+											  <label class="control-label">Birthday</label>
+											  <input class="form-control" type="date">
+											</div>
+											<div class="form-group">
+										        <label class="control-label">Gender</label>
+										        <select class="form-control">
+										          <option>Male</option>
+										          <option>Female</option>
+										        </select>
+										    </div>
+											<div class="form-group">
 										      <label class="control-label">Photo</label>
 										      <div>
 										        <input type="text" readonly="" class="form-control" placeholder="Browse...">
 										        <input type="file" >
 										      </div>
 										    </div>
+										    <div class="form-group">
+										        <label class="control-label">Student Type</label>
+										        <select class="form-control">
+										          <option>Old</option>
+										          <option>New</option>
+										        </select>
+										    </div>
+										    <div class="form-group">
+										        <label class="control-label">Section</label>
+										        <select class="form-control">
+										          <option>1 grade</option>
+										          <option>2 grade</option>
+										          <option>3 grade</option>
+										          <option>4 grade</option>
+										          <option>5 grade</option>
+										        </select>
+										    </div>
+										    <br><br>
+										    <fieldset>Representative Data</fieldset>
+										    <div class="form-group label-floating">
+											  <label class="control-label">Representative DNI</label>
+											  <input class="form-control" type="text">
+											</div>
+											<div class="form-group label-floating">
+											  <label class="control-label">Representative Relationship</label>
+											  <input class="form-control" type="text">
+											</div>
 										    <p class="text-center">
 										    	<button href="#!" class="btn btn-info btn-raised btn-sm"><i class="zmdi zmdi-floppy"></i> Save</button>
 										    </p>
@@ -198,6 +237,10 @@
 											<th class="text-center">Address</th>
 											<th class="text-center">Email</th>
 											<th class="text-center">Phone</th>
+											<th class="text-center">Birthday</th>
+											<th class="text-center">Gender</th>
+											<th class="text-center">Type</th>
+											<th class="text-center">Section</th>
 											<th class="text-center">Update</th>
 											<th class="text-center">Delete</th>
 										</tr>
@@ -210,6 +253,10 @@
 											<td>El Salvador</td>
 											<td>carlos@gmail.com</td>
 											<td>+50312345678</td>
+											<td>07/03/1997</td>
+											<td>Male</td>
+											<td>Old</td>
+											<td>Section</td>
 											<td><a href="#!" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></td>
 											<td><a href="#!" class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-delete"></i></a></td>
 										</tr>
@@ -220,16 +267,24 @@
 											<td>El Salvador</td>
 											<td>alicia@gmail.com</td>
 											<td>+50312345678</td>
+											<td>07/07/1990</td>
+											<td>Female</td>
+											<td>New</td>
+											<td>Section</td>
 											<td><a href="#!" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></td>
 											<td><a href="#!" class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-delete"></i></a></td>
 										</tr>
 										<tr>
 											<td>3</td>
 											<td>Sarai</td>
-											<td>Lopez</td>
+											<td>Mercado</td>
 											<td>El Salvador</td>
 											<td>sarai@gmail.com</td>
 											<td>+50312345678</td>
+											<td>09/09/1991</td>
+											<td>Female</td>
+											<td>Old</td>
+											<td>Section</td>
 											<td><a href="#!" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></td>
 											<td><a href="#!" class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-delete"></i></a></td>
 										</tr>
@@ -240,6 +295,10 @@
 											<td>El Salvador</td>
 											<td>alba@gmail.com</td>
 											<td>+50312345678</td>
+											<td>01/10/1993</td>
+											<td>Female</td>
+											<td>New</td>
+											<td>Section</td>
 											<td><a href="#!" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></td>
 											<td><a href="#!" class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-delete"></i></a></td>
 										</tr>
