@@ -1,0 +1,119 @@
+@import './helpers/index';
+@import './sections/index';
+
+body {
+  background-color: white !important;
+}
+
+.separadores {
+  background-color: $red;
+  color: white;
+  margin: 5px 0px;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.linea_separador {
+  //margin-top: 58px;
+  margin: 5px 0px;
+  border: solid $red 2px;
+  width: 100%;
+}
+
+.linea_h5 {
+
+  border: solid $red 2px;
+  width: 100%;
+  margin: 0px;
+}
+
+.normas_img {
+  border: solid $red 4px;
+}
+
+.boton_Alum_Padre:hover {
+  background-color: rgb(255, 255, 255);
+  color: $red;
+}
+.eventos h2 {
+  margin-bottom: 0;
+  color: $red;
+}
+.comilla{
+  font-size: 50px;
+}
+.eti_comilla {
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.card-testimonial {
+  border: none;
+  position: relative;
+  background-color: transparent ;
+  .card-body {
+    background-color: transparent;
+    z-index: 10;
+  }
+  &--second {
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      background-color: $red;
+      height: 100%;
+      position: absolute;
+      width: 200%;
+      z-index: 5;
+   }
+  }
+
+  .fa-quote{
+    &-left,
+    &-right{
+      font-size: 30px;
+    }
+  }
+}
+.testimonios{
+  background-color: $red;
+}
+//REDES SOCIALES
+.nav-RS{
+  ul{
+    display:flex; margin: 5px;
+    li{
+      a{
+        text-decoration: none;
+        i{
+          font-size: 30px; 
+          margin: 0px 5px; 
+          color:$red; 
+          border: solid $white 1px; 
+          border-radius:50%; 
+          background-color: $white; 
+        }
+        .facebook {
+          color: #3b5998;
+          cursor: pointer;
+        }
+        .google {
+            color: #db4a39;
+        }
+        .youtube {
+            color: red;
+        }
+        .twitter {
+            color: #00acee;
+        }
+        :hover{
+          color:#B00D0F;
+          border: solid #B00D0F 1px;
+      }
+      }
+    }
+  }
+}

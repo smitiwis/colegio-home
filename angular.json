@@ -28,14 +28,19 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/assets/css/layerslider.css",
+              "src/assets/css/default.css",
+              "src/assets/css/stylec.css",
+              "node_modules/bootstrap/scss/bootstrap.scss",
+              "src/assets/scss/style.scss"
             ],
             "scripts": [
-              "node_modules/jquery/dist/jquery.min.js",
+              "src/assets/js/greensockcd.js",
+              "src/assets/js/jquery.min.js",
               "node_modules/bootstrap/dist/js/bootstrap.min.js",
               "src/assets/js/layerslider.kreaturamedia.js",
               "src/assets/js/layerslider.transitions.js",
-              "src/assets/js/greensockcd.js"
+              "src/assets/js/layer.js"
             ]
           },
           "configurations": {

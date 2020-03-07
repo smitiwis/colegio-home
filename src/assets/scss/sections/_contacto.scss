@@ -1,0 +1,54 @@
+.boton_form{
+    background-color: $red;
+    border: $red;
+    padding: 10px 15px;
+}
+.boton_form:hover{
+    background-color: rgb(255, 0, 0);
+    border: rgb(255, 0, 0);
+    color: $white;
+}
+fieldset{
+    border: solid #B00D0F;
+    .legend{
+        width: auto;
+        text-align: center; 
+        padding: 0px 15px;
+        i{
+            font-size: 55px; 
+            background-color: #B00D0F;
+            border-radius: 50%; 
+            padding: 15px; 
+            color: white;
+        } 
+    }
+    div{
+        text-align: center;
+    }
+}
+// red social CONTACTO
+.redes_sociales{
+    div{
+        a{
+            text-decoration: none;
+            i{
+                font-size: 59px; color:#B00D0F;
+                         
+            }.facebook {
+                color: #3b5998;
+                cursor: pointer;
+            }
+            .google {
+                color: #db4a39;
+            }
+            .youtube {
+                color: red;
+            }
+            .twitter {
+                color: #00acee;
+            }:hover{
+                color:#B00D0F;
+            }
+        }
+    }
+}
