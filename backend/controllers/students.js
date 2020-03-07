@@ -1,6 +1,9 @@
 const Student = require("../models/students");
+const CryptoJS = require("crypto-js");
 
 exports.createStudent = (req, res, next) => {
+  const pwdEncrypted = CryptoJS.AES.encrypt(req.body.pwd, 'secret').toString();
+
   const student = new Student({
     name: req.body.name,
     ape_pat: req.body.ape_pat,
@@ -9,6 +12,8 @@ exports.createStudent = (req, res, next) => {
     birthday: req.body.birthday,
     email: req.body.email,
     cel: req.body.cel,
+    role_id: req.body.role_id,
+    pwd: pwdEncrypted
     // creator: req.userData.userId
   });
 
@@ -27,6 +32,7 @@ exports.createStudent = (req, res, next) => {
 };
 
 exports.updateStudent = (req, res, next) => {
+  const pwdEncrypted = CryptoJS.AES.encrypt(req.body.pwd, 'secret').toString();
 
   const student = new Student({
     _id: req.params.id,
@@ -37,6 +43,7 @@ exports.updateStudent = (req, res, next) => {
     birthday: req.body.birthday,
     email: req.body.email,
     cel: req.body.cel,
+    pwd: pwdEncrypted
   });
 
   student.updateOne({ _id: req.params.id }, student)
@@ -81,6 +88,10 @@ exports.getStudent = (req, res, next) => {
   Student.findById(req.params.id)
     .then(student => {
       if (student) {
+        const pwdEncrypted = student.pwd;
+        const pwdDecrypted = CryptoJS.AES.decrypt(pwdEncrypted, 'secret').toString(CryptoJS.enc.Utf8);
+        student.pwd = pwdDecrypted;
+
         res.status(200).json(student);
       } else {
         res.status(404).json({ message: "Estudiante no encontrado" });
@@ -108,4 +119,5 @@ exports.deleteStudent = (req, res, next) => {
         message: "Fallo el servicio!"
       });
     });
+
 };

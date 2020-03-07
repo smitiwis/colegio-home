@@ -1,7 +1,11 @@
 const Teacher = require("../models/teacher");
+const CryptoJS = require("crypto-js");
 
 exports.createTeacher = (req, res, next) => {
-  const url = req.protocol + "://" + req.get("host");
+  console.log('inicio creado')
+  const pwdEncrypted = CryptoJS.AES.encrypt(req.body.pwd, 'secret').toString();
+ console.log(pwdEncrypted, 'encriptado')
+ 
   const teacher = new Teacher({
     name: req.body.name,
     ape_pat: req.body.ape_pat,
@@ -10,6 +14,8 @@ exports.createTeacher = (req, res, next) => {
     birthday: req.body.birthday,
     email: req.body.email,
     cel: req.body.cel,
+    role_id: req.body.role_id,
+    pwd: pwdEncrypted
     // creator: req.userData.userId
   });
 
@@ -21,6 +27,7 @@ exports.createTeacher = (req, res, next) => {
       });
     })
     .catch(error => {
+      console.log(error, 'err')
       res.status(500).json({
         message: "La creación del docente tuvo un error!"
       });
@@ -28,6 +35,7 @@ exports.createTeacher = (req, res, next) => {
 };
 
 exports.updateTeacher = (req, res, next) => {
+  const pwdEncrypted = CryptoJS.AES.encrypt(req.body.pwd, 'secret').toString();
 
   const teacher = new Teacher({
     _id: req.params.id,
@@ -38,6 +46,7 @@ exports.updateTeacher = (req, res, next) => {
     birthday: req.body.birthday,
     email: req.body.email,
     cel: req.body.cel,
+    pwd: pwdEncrypted
   });
 
   Teacher.updateOne({ _id: req.params.id }, teacher)
@@ -51,62 +60,67 @@ exports.updateTeacher = (req, res, next) => {
     });
 };
 
-// exports.getPosts = (req, res, next) => {
-//   const pageSize = +req.query.pagesize;
-//   const currentPage = +req.query.page;
-//   const postQuery = Post.find();
-//   let fetchedPosts;
-//   if (pageSize && currentPage) {
-//     postQuery.skip(pageSize * (currentPage - 1)).limit(pageSize);
-//   }
-//   postQuery
-//     .then(documents => {
-//       fetchedPosts = documents;
-//       return Post.count();
-//     })
-//     .then(count => {
-//       res.status(200).json({
-//         message: "Posts fetched successfully!",
-//         posts: fetchedPosts,
-//         maxPosts: count
-//       });
-//     })
-//     .catch(error => {
-//       res.status(500).json({
-//         message: "Fetching posts failed!"
-//       });
-//     });
-// };
+exports.getTeachers = (req, res, next) => {
+  const pageSize = +req.query.pagesize;
+  const currentPage = +req.query.page;
+  const teacherQuery = Post.find();
+  let fetchedTeachers;
+  if (pageSize && currentPage) {
+    postQuery.skip(pageSize * (currentPage - 1)).limit(pageSize);
+  }
 
-// exports.getPost = (req, res, next) => {
-//   Post.findById(req.params.id)
-//     .then(post => {
-//       if (post) {
-//         res.status(200).json(post);
-//       } else {
-//         res.status(404).json({ message: "Post not found!" });
-//       }
-//     })
-//     .catch(error => {
-//       res.status(500).json({
-//         message: "Fetching post failed!"
-//       });
-//     });
-// };
+  teacherQuery
+    .then(documents => {
+      fetchedTeachers = documents;
+      return Post.count();
+    })
+    .then(count => {
+      res.status(200).json({
+        message: "Posts fetched successfully!",
+        teachers: fetchedTeachers,
+        maxTeachers: count
+      });
+    })
+    .catch(error => {
+      res.status(500).json({
+        message: "Fetching posts failed!"
+      });
+    });
+};
 
-// exports.deletePost = (req, res, next) => {
-//   Post.deleteOne({ _id: req.params.id, creator: req.userData.userId })
-//     .then(result => {
-//       console.log(result);
-//       if (result.n > 0) {
-//         res.status(200).json({ message: "Deletion successful!" });
-//       } else {
-//         res.status(401).json({ message: "Not authorized!" });
-//       }
-//     })
-//     .catch(error => {
-//       res.status(500).json({
-//         message: "Deleting posts failed!"
-//       });
-//     });
-// };
+exports.getTeacher = (req, res, next) => {
+  Teacher.findById(req.params.id)
+    .then(teacher => {
+      if (teacher) {
+        const pwdEncrypted = teacher.pwd;
+        const pwdDecrypted = CryptoJS.AES.decrypt(pwdEncrypted, 'secret').toString(CryptoJS.enc.Utf8);
+        teacher.pwd = pwdDecrypted;
+
+        res.status(200).json(teacher);
+      } else {
+        res.status(404).json({ message: "Post not found!" });
+      }
+    })
+    .catch(error => {
+      res.status(500).json({
+        message: "Fetching post failed!"
+      });
+    });
+};
+
+exports.deleteTeacher = (req, res, next) => {
+  Teacher.deleteOne({ _id: req.params.id, creator: req.userData.userId })
+    .then(result => {
+      console.log(result);
+      if (result.n > 0) {
+        res.status(200).json({ message: "Deletion successful!" });
+      } else {
+        res.status(401).json({ message: "Not authorized!" });
+      }
+    })
+    .catch(error => {
+      res.status(500).json({
+        message: "Deleting posts failed!"
+      });
+    });
+};

@@ -30,7 +30,13 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "src/assets/js/layerslider.kreaturamedia.js",
+              "src/assets/js/layerslider.transitions.js",
+              "src/assets/js/greensockcd.js"
+            ]
           },
           "configurations": {
             "production": {
