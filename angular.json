@@ -32,7 +32,8 @@
               "src/assets/css/default.css",
               "src/assets/css/stylec.css",
               "node_modules/bootstrap/scss/bootstrap.scss",
-              "src/assets/scss/style.scss"
+              "src/assets/scss/style.scss",
+              "src/assets/css/admin/sb-admin-2.min.css"
             ],
             "scripts": [
               "src/assets/js/greensockcd.js",
@@ -40,7 +41,8 @@
               "node_modules/bootstrap/dist/js/bootstrap.min.js",
               "src/assets/js/layerslider.kreaturamedia.js",
               "src/assets/js/layerslider.transitions.js",
-              "src/assets/js/layer.js"
+              "src/assets/js/layer.js",
+              "src/assets/js/admin/sb-admin-2.min.js"
             ]
           },
           "configurations": {
