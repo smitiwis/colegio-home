@@ -7,6 +7,7 @@ import { LandingModule } from './landing/landing.module';
 import { RoutesModule } from './routes/routes.module';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { PeriodModule } from './admin/views/period/period.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FormsModule } from '@angular/forms';
     LandingModule,
     AdminModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    PeriodModule,
   ],
   providers: [HttpClientModule],
   bootstrap: [AppComponent]

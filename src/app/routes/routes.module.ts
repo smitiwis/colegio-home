@@ -26,12 +26,21 @@ const routes: Routes = [
     children: [
       {
         path: 'periodos',
-        loadChildren: '../admin/views/period/period.module#PeriodModule'
+        loadChildren: '../admin/views/period/period-list/period-list.module#PeriodListModule',
+      },
+      {
+        path: 'periodos/crear',
+        loadChildren: '../admin/views/period/period-create/period-create.module#PeriodCreateModule'
+      },
+      {
+        path: 'periodos/editar/:id',
+        loadChildren: '../admin/views/period/period-create/period-create.module#PeriodCreateModule',
+        pathMatch: 'prefix'
       },
       {
         path: 'alumnos',
         loadChildren: '../admin/views/period/period.module#PeriodModule'
-      }
+      },
     ],
 
   }
