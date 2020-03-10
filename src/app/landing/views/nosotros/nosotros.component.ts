@@ -1,12 +1,15 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
 declare global {
   interface Window { Glob: any; }
 }
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html'
+  selector: 'app-nosotros',
+  templateUrl: './nosotros.component.html',
+  styleUrls: ['./nosotros.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class NosotrosComponent implements OnInit {
 
   constructor() { }
 

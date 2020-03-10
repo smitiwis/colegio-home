@@ -2,9 +2,9 @@ import { NgModule } from '@angular/core';
 import { LandingComponent } from './landing.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { HomeModule } from './views/home/home.module';
 import { LandingRoutingModule } from './landing-routing.module';
-
+import {HttpClientModule} from '@angular/common/http';
+import { RouterModule } from '@angular/router';
 @NgModule({
   declarations: [
     LandingComponent,
@@ -12,10 +12,10 @@ import { LandingRoutingModule } from './landing-routing.module';
     FooterComponent,
   ],
   imports: [
-    HomeModule,
+    // HttpClientModule,
+    // RouterModule
     LandingRoutingModule
   ],
-  bootstrap: [LandingComponent],
-  exports: [LandingComponent]
+  
 })
 export class LandingModule { }

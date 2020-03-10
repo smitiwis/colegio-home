@@ -1,12 +1,14 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
 declare global {
   interface Window { Glob: any; }
 }
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html'
+  selector: 'app-contacto',
+  templateUrl: './contacto.component.html',
 })
-export class HomeComponent implements OnInit {
+export class ContactoComponent implements OnInit {
 
   constructor() { }
 
