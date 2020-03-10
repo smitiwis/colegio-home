@@ -1,5 +1,6 @@
-var lsjQuery = jQuery;
-lsjQuery(document).ready(function () {
+window.Glob = {};
+Glob.startSlider = function () {
+  const lsjQuery = jQuery;
   if (typeof lsjQuery.fn.layerSlider == "undefined") { lsShowNotice('layerslider_1', 'jquery'); }
   else {
     lsjQuery("#layerslider_1").layerSlider({
@@ -26,4 +27,4 @@ lsjQuery(document).ready(function () {
       cbNext: function (data) { }
     })
   }
-});
+}
