@@ -1,24 +1,15 @@
-.boton_form{
-    background-color: $red;
-    border: $red;
-    padding: 10px 15px;
-}
-.boton_form:hover{
-    background-color: rgb(255, 0, 0);
-    border: rgb(255, 0, 0);
-    color: $white;
-}
-fieldset{
-    border: solid #B00D0F;
+.fieldset{
+    border: solid 3px #B00D0F;
     .legend{
         width: auto;
+        height: auto;
         text-align: center; 
-        padding: 0px 15px;
+        padding: 0px 20px;
         i{
             font-size: 55px; 
             background-color: #B00D0F;
             border-radius: 50%; 
-            padding: 15px; 
+            padding: 15px 17px; 
             color: white;
         } 
     }
@@ -30,24 +21,10 @@ fieldset{
 .redes_sociales{
     div{
         a{
-            text-decoration: none;
+            //text-decoration: none;
             i{
-                font-size: 59px; color:#B00D0F;
-                         
-            }.facebook {
-                color: #3b5998;
-                cursor: pointer;
-            }
-            .google {
-                color: #db4a39;
-            }
-            .youtube {
-                color: red;
-            }
-            .twitter {
-                color: #00acee;
-            }:hover{
-                color:#B00D0F;
+                margin: 25px 0px 8px 0px;
+                font-size: 59px; 
             }
         }
     }
