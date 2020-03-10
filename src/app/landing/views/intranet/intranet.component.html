@@ -1,10 +1,9 @@
-<section class="container mt-5">
-
-  <form autocomplete="off" (ngSubmit)="onSubmit()" [formGroup]="loginForm">
+<section class="container">
+  <form class="full-box logInForm" autocomplete="off" (ngSubmit)="onSubmit()" [formGroup]="loginForm">
     <div>
       <div class="text-center text-uppercase">
-        <p>
-          <i class="zmdi zmdi-account-circle  icono" style="font-size: 70px;"></i><br>
+        <p class="text-center text-muted">
+          <i class="fa fa-user zmdi" style="font-size: 70px;"></i><br>
           Inicia sesión
         </p>
       </div>
@@ -21,4 +20,5 @@
       </div>
     </div>
   </form>
+
 </section>

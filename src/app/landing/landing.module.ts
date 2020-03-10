@@ -3,7 +3,7 @@ import { LandingComponent } from './landing.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LandingRoutingModule } from './landing-routing.module';
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 @NgModule({
   declarations: [
