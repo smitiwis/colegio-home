@@ -8,13 +8,6 @@ declare global {
   selector: 'app-preintranet',
   templateUrl: './preintranet.component.html',
 })
-export class PreintranetComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-    const startSlider = window.Glob.startSlider;
-    startSlider();
-  }
-
+export class PreintranetComponent {
+  
 }

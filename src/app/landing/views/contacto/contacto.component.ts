@@ -8,13 +8,7 @@ declare global {
   selector: 'app-contacto',
   templateUrl: './contacto.component.html',
 })
-export class ContactoComponent implements OnInit {
+export class ContactoComponent  {
 
-  constructor() { }
-
-  ngOnInit() {
-    const startSlider = window.Glob.startSlider;
-    startSlider();
-  }
 
 }

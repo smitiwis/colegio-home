@@ -9,13 +9,6 @@ declare global {
   templateUrl: './nosotros.component.html',
   styleUrls: ['./nosotros.component.scss']
 })
-export class NosotrosComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-    const startSlider = window.Glob.startSlider;
-    startSlider();
-  }
-
+export class NosotrosComponent {
+  
 }
