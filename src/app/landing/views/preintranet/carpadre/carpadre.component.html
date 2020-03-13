@@ -14,57 +14,8 @@
     </div>
     <div>
         <figure class="figure">
-            <img src="/assets/imgs/papascari.jpg" class="card-img-top" alt="img" data-toggle="modal"
-                data-target="#moda_padres" data-whatever="@mdo">
+            <img src="/assets/imgs/papascari.jpg">
         </figure>
-        <!-- MODAL PADRES-->
-        <div class="modal fade" id="moda_padres" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header d-flex justify-content-around">
-                        <div></div>
-                        <div class="col-md-7 p-0">
-                            <p class="modal-title separadores text-center">
-                                PADRES
-                            </p>
-                        </div>
-                        <div>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="modal-body mt-0 mx-5">
-                        <!--  <form class="full-box logInForm" autocomplete="off" (ngSubmit)="onSubmit()" [formGroup]="loginForm">-->
-                        <!-- FORMULARIO PADRES-->
-                        <form action="">
-                            <div>
-                                <div class="text-center text-uppercase">
-                                    <p class="text-center text-muted">
-                                        <i class="fa fa-user zmdi" style="font-size: 70px;"></i><br>
-                                        Inicia sesión
-                                    </p>
-                                </div>
-                                <div class="form-group label-floating">
-                                    <label class="control-label" for="UserEmail">DNI</label>
-                                    <input class="form-control" id="UserEmail" type="text">
-                                </div>
-                                <div class="form-group label-floating">
-                                    <label class="control-label" for="UserPass">Contraseña</label>
-                                    <input class="form-control" id="UserPass" type="password">
-                                </div>
-                                <div class="form-group">
-                                    <button type="submit" class="btn btn-primary mr-3">Iniciar
-                                        sesión</button>
-                                    <button type="button" class="btn btn-secondary"
-                                        data-dismiss="modal">cancelar</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
     <div>
         <p class="card-text">
@@ -76,4 +27,52 @@
             <li>Comunicados</li>
         </ul>
     </div>
+    <!-- MODAL PADRES-->
+    <div class="modal fade" id="moda_padres" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header d-flex justify-content-around">
+                    <div></div>
+                    <div class="col-md-7 p-0">
+                        <p class="modal-title separadores text-center">
+                            PADRES
+                        </p>
+                    </div>
+                    <div>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="modal-body mt-0 mx-5">
+                    <!--  <form class="full-box logInForm" autocomplete="off" (ngSubmit)="onSubmit()" [formGroup]="loginForm">-->
+                    <!-- FORMULARIO PADRES-->
+                    <form action="">
+                        <div>
+                            <div class="text-center text-uppercase">
+                                <p class="text-center text-muted">
+                                    <i class="fa fa-user zmdi" style="font-size: 70px;"></i><br>
+                                    Inicia sesión
+                                </p>
+                            </div>
+                            <div class="form-group label-floating">
+                                <label class="control-label" for="UserEmail">DNI</label>
+                                <input class="form-control" id="UserEmail" type="text">
+                            </div>
+                            <div class="form-group label-floating">
+                                <label class="control-label" for="UserPass">Contraseña</label>
+                                <input class="form-control" id="UserPass" type="password">
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary mr-3">Iniciar
+                                    sesión</button>
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">cancelar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
