@@ -13,23 +13,10 @@
     </div>
     <!-- CARD DOCENTE, ALUMNO, PADRE -->
     <div class="row card-deck mt-5">
-        <div class="card-alumno card cards col-md-4 card-img-top" style="width: 18rem;" alt="img" data-toggle="modal"
-        data-target="#moda_docentes" data-whatever="@mdo">
-
-            <app-cardocente></app-cardocente>
-
-        </div>
-        <div class="card-alumno card cards col-md-4 card-img-top" style="width: 18rem;" alt="img" data-toggle="modal"
-            data-target="#moda_alumnos" data-whatever="@mdo">
-
-            <app-caralumno></app-caralumno>
-
-        </div>
-        <div class="card-alumno card cards col-md-4 card-img-top" style="width: 18rem;" alt="img" data-toggle="modal"
-            data-target="#moda_padres" data-whatever="@mdo">
-
-            <app-carpadre></app-carpadre>
-            
+        <div *ngFor="let card of cards" class="card-alumno card cards col-md-4 card-img-top" style="width: 18rem;" alt="img" data-toggle="modal"
+        data-target="#modal_docentes">
+          <app-card-container [title]="card.title" [imgUrl]="card.src" [content]="card.contenido"></app-card-container>
+          <app-card-modal></app-card-modal>
         </div>
     </div>
 </div>

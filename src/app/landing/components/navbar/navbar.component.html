@@ -28,22 +28,23 @@
             </ul>
           </div>
 
-          <div style="margin-bottom: 13px; margin-top: 5px;" >
-            <ul class="navbar-nav mr-auto" >
+          <div style="margin-bottom: 13px; margin-top: 5px;">
+            <ul class="navbar-nav mr-auto">
 
-              <li class="nav-item active" (click) = "navActivo()">
-                <a class="navb-link"  routerLink="" > <i class="fa fa-home"></i>Inicio</a>
+              <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+                true}">
+                <a class="navb-link" routerLink="/"> <i class="fa fa-home"></i>Inicio</a>
               </li>
-              <li class="">
+              <li class="nav-item " routerLinkActive="active">
                 <a class="navb-link " routerLink="/nosotros"><i class="fa fa-user"></i>Nosotros</a>
               </li>
-              <li class="">
+              <li class="nav-item " routerLinkActive="active">
                 <a class="navb-link " routerLink="/contacto"><i class="fa fa-envelope"></i>Contáctanos</a>
               </li>
-              <li class="">
+              <li class="nav-item " routerLinkActive="active">
                 <a class="navb-link " routerLink="/login"><i class="fa fa-key"></i>Intranet </a>
               </li>
-              
+
             </ul>
           </div>
         </div>
