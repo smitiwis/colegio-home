@@ -24,6 +24,7 @@
 } 
 .nav-RS{
     ul{
+        margin: 10px ;
         li{
             .rs-face{
                 color: white;
@@ -46,6 +47,14 @@
                 background-color: white;
                 color: #00bb2d;
             }
+        }
+    }
+}
+.navul{
+    li{
+        a{
+            width: 115px;
+            padding: 15px 12px;
         }
     }
 }

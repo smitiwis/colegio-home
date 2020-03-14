@@ -1,4 +1,4 @@
-<div class="container" style="margin-top: 100px;">
+<div class="container" style="margin-top: 125px;">
 
     <div class=" d-flex justify-content-between">
         <div class="col-md-4 p-0 align-self-end">
@@ -13,10 +13,14 @@
     </div>
     <!-- CARD DOCENTE, ALUMNO, PADRE -->
     <div class="row card-deck mt-5">
-        <div *ngFor="let card of cards" class="card-alumno card cards col-md-4 card-img-top" style="width: 18rem;" alt="img" data-toggle="modal"
-        data-target="#modal_docentes">
-          <app-card-container [title]="card.title" [imgUrl]="card.src" [content]="card.contenido"></app-card-container>
-          <app-card-modal></app-card-modal>
+        <div *ngFor="let card of cards" class="card-alumno card cards col-md-4 card-img-top" style="width: 18rem;"
+            alt="img" data-toggle="modal" data-target="#modal_docentes">
+
+            <app-card-container  (click)="soyCard(card.title);"  [title]="card.title" [imgUrl]="card.src" [content]="card.contenido">
+            </app-card-container>
+
+        </div>
+        <div >
+            <app-card-modal></app-card-modal>
         </div>
     </div>
-</div>
