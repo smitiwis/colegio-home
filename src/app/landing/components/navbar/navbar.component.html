@@ -28,20 +28,22 @@
             </ul>
           </div>
 
-          <div style="margin-bottom: 13px; margin-top: 5px;">
-            <ul class="navbar-nav">
-              <li>
-                <a class="navb-link active" routerLink=""><i class="fa fa-home"></i>Inicio</a>
+          <div style="margin-bottom: 13px; margin-top: 5px;" >
+            <ul class="navbar-nav mr-auto" >
+
+              <li class="nav-item active" (click) = "navActivo()">
+                <a class="navb-link"  routerLink="" > <i class="fa fa-home"></i>Inicio</a>
               </li>
-              <li>
+              <li class="">
                 <a class="navb-link " routerLink="/nosotros"><i class="fa fa-user"></i>Nosotros</a>
               </li>
-              <li>
+              <li class="">
                 <a class="navb-link " routerLink="/contacto"><i class="fa fa-envelope"></i>Contáctanos</a>
               </li>
-              <li>
-                <a class="navb-link " routerLink="/preintranet"><i class="fa fa-key"></i>Intranet </a>
+              <li class="">
+                <a class="navb-link " routerLink="/login"><i class="fa fa-key"></i>Intranet </a>
               </li>
+              
             </ul>
           </div>
         </div>

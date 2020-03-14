@@ -15,7 +15,7 @@ const routes: Routes = [
         loadChildren: '../landing/views/home/home.module#HomeModule',
       },
       {
-        path: 'preintranet',
+        path: 'login',
         loadChildren: '../landing/views/preintranet/preintranet.module#PreintranetModule',
       },
       {
