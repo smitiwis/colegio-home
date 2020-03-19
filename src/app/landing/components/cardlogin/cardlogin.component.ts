@@ -20,4 +20,9 @@ export class CardloginComponent implements OnInit {
     var etiP = document.getElementById('textoP');
     etiP.innerHTML = (usuario);
   }
+
+ 
+
+
+
 }

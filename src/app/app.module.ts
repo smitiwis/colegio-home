@@ -11,7 +11,7 @@ import { PeriodModule } from './admin/views/period/period.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,

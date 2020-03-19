@@ -9,3 +9,6 @@ const routes: Routes = [{ path: '', component: PreintranetComponent }];
   exports: [RouterModule]
 })
 export class PreintranetRoutingModule { }
+
+
+

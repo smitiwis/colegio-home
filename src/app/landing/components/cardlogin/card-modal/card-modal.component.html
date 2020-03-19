@@ -17,8 +17,11 @@
       </div>
       <div class="modal-body mt-0 mx-5">
         <!--  <form class="full-box logInForm" autocomplete="off" (ngSubmit)="onSubmit()" [formGroup]="loginForm">-->
+
+
+
         <!-- FORMULARIO ALUMNO-->
-        <form action="">
+        <form action="" id="form">
           <div>
             <div class="text-center text-uppercase">
               <p class="text-center text-muted">
@@ -26,21 +29,32 @@
                 Inicia sesión
               </p>
             </div>
+            <!-- DNI -> Usuario -->
             <div class="form-group label-floating">
-              <label class="control-label" for="UserEmail">DNI</label>
-              <input class="form-control" id="UserEmail" type="text">
+              <label class="control-label" for="dni">DNI</label>
+              <input class="form-control" #inputDni id="dni" type="text" name="dni" value="78123987">
             </div>
+            <!-- Password -> Usuario -->
             <div class="form-group label-floating">
-              <label class="control-label" for="UserPass">Contraseña</label>
-              <input class="form-control" id="UserPass" type="password">
+              <label class="control-label" for="password">Contraseña</label>
+              <input class="form-control" #inputPass id="password" type="password" name="password" >
             </div>
+            <!-- Enviar login -->
             <div class="form-group">
-              <button type="submit" class="btn btn-primary mr-3">Iniciar
+              <button type="submit" (click)="iniciarSecion(inputDni, inputPass);"  class="btn btn-primary mr-3">Iniciar
                 sesión</button>
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">cancelar</button>
+
+              <button type="button"class="btn btn-secondary" data-dismiss="modal">cancelar</button>
             </div>
+           
           </div>
         </form>
+
+
+
+
+
+
       </div>
       <div class="modal-footer">
       </div>
