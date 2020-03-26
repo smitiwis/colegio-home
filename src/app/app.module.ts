@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { LandingModule } from './landing/landing.module';
 import { RoutesModule } from './routes/routes.module';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PeriodModule } from './admin/views/period/period.module';
 
 @NgModule({
@@ -21,6 +21,7 @@ import { PeriodModule } from './admin/views/period/period.module';
     HttpClientModule,
     FormsModule,
     PeriodModule,
+    ReactiveFormsModule
   ],
   providers: [HttpClientModule],
   bootstrap: [AppComponent]
