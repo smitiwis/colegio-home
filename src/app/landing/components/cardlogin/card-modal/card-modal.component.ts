@@ -11,6 +11,7 @@ import { debounceTime } from 'rxjs/operators';
 export class CardModalComponent implements OnInit {
 
   @Input() title: string;
+  @Input() radioUser: any ={ };
 
   loginForm: FormGroup;
   documentControl: AbstractControl;
