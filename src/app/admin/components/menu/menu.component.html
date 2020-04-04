@@ -27,42 +27,89 @@
 
   <!-- Nav Item - Pages Collapse Menu -->
   <li class="nav-item">
-    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
-      aria-controls="collapseTwo">
+    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePeriodo" aria-expanded="true"
+      aria-controls="collapsePeriodo">
       <i class="fas fa-fw fa-cog"></i>
-      <span>Periodos Académicos</span>
+      <span>PERIODO</span>
     </a>
-    <div id="collapseTwo" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+
+    <div id="collapsePeriodo" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
       <div class="bg-white py-2 collapse-inner rounded">
-        <h6 class="collapse-header">Login Screens:</h6>
-        <a class="collapse-item" href="login.html">Login</a>
-        <a class="collapse-item" href="register.html">Register</a>
-        <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
-        <div class="collapse-divider"></div>
-        <h6 class="collapse-header">Other Pages:</h6>
+        
+        <h6 class="collapse-header">Periodo de estudio</h6>
+        <!--NAV DE PERIODOS-->
+        <ul class="navbar-nav mr-auto navul">
+          <li class="nav-item" routerLinkActive="active" >
+            <a class="collapse-item" routerLink="periodos/crear" >Nuevo Periodo</a>
+          </li>
+          <li class="nav-item " routerLinkActive="active">
+            <a class="collapse-item" routerLink="periodos/list" >Lista de Periodos</a>
+          </li>
+          <li class="nav-item " routerLinkActive="active">
+            <a class="collapse-item" routerLink="periodos/editar" >Editar Periodo</a>
+          </li>
+        </ul>
+
+        <!-- <h6 class="collapse-header">Other Pages:</h6>
         <a class="collapse-item" href="404.html">404 Page</a>
-        <a class="collapse-item" href="blank.html">Blank Page</a>
+        <a class="collapse-item" href="blank.html">Blank Page</a> -->
       </div>
     </div>
   </li>
 
 
-  <!-- Nav Item - Utilities Collapse Menu -->
+  <!-- DOCENTES -->
   <li class="nav-item">
-    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
-      aria-expanded="true" aria-controls="collapseUtilities">
-      <i class="fas fa-fw fa-wrench"></i>
-      <span>Docentes</span>
+    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseDocente" aria-expanded="true"
+      aria-controls="collapseDocente">
+      <i class="fas fa-fw fa-cog"></i>
+      <span>DOCENTES</span>
     </a>
+    <div id="collapseDocente" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+      <div class="bg-white py-2 collapse-inner rounded">
+        <h6 class="collapse-header">Docente académico</h6>
+        <!--NAV DE DOCENTES-->
+        <ul class="navbar-nav mr-auto navul">
+          <li class="nav-item" routerLinkActive="active" >
+            <a class="collapse-item" routerLink="docente/crear" >Nuevo Docente</a>
+          </li>
+          <li class="nav-item " routerLinkActive="active">
+            <a class="collapse-item" routerLink="docente/list" >Lista de Docentes</a>
+          </li>
+          <li class="nav-item " routerLinkActive="active">
+            <a class="collapse-item" routerLink="docente/editar" >Editar Docente</a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </li>
 
-  <li class="nav-item">
-    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
-      aria-expanded="true" aria-controls="collapseUtilities">
-      <i class="fas fa-fw fa-wrench"></i>
-      <span>Alumnos</span>
-    </a>
-  </li>
+
+<!-- ALUMNOS -->
+<li class="nav-item">
+  <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseAlumno" aria-expanded="true"
+    aria-controls="collapseAlumno">
+    <i class="fas fa-fw fa-cog"></i>
+    <span>ALUMNOS</span>
+  </a>
+  <div id="collapseAlumno" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+    <div class="bg-white py-2 collapse-inner rounded">
+      <h6 class="collapse-header">Alumno académico</h6>
+      <!--NAV DE ALUMNOS-->
+      <ul class="navbar-nav mr-auto navul">
+        <li class="nav-item" routerLinkActive="active" >
+          <a class="collapse-item" routerLink="alumno/crear" >Registrar Alumno</a>
+        </li>
+        <li class="nav-item " routerLinkActive="active">
+          <a class="collapse-item" routerLink="alumno/list" >Lista de Alumnos</a>
+        </li>
+        <li class="nav-item " routerLinkActive="active">
+          <a class="collapse-item" routerLink="alumno/editar" >Editar Alumno</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</li>
 
   <!-- Divider -->
   <hr class="sidebar-divider">

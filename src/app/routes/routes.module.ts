@@ -19,10 +19,6 @@ const routes: Routes = [
         loadChildren: '../landing/views/preintranet/preintranet.module#PreintranetModule',
       },
       {
-        path: 'intranet',
-        loadChildren: '../landing/views/intranet/intranet.module#IntranetModule',
-      },
-      {
         path: 'contacto',
         loadChildren: '../landing/views/contacto/contacto.module#ContactoModule',
       },
@@ -39,6 +35,10 @@ const routes: Routes = [
     children: [
       {
         path: 'periodos',
+        loadChildren: '../admin/views/period/period.module#PeriodModule'
+      },
+      {
+        path: 'periodos/list',
         loadChildren: '../admin/views/period/period-list/period-list.module#PeriodListModule',
       },
       {
@@ -46,16 +46,51 @@ const routes: Routes = [
         loadChildren: '../admin/views/period/period-create/period-create.module#PeriodCreateModule'
       },
       {
-        path: 'periodos/editar/:id',
-        loadChildren: '../admin/views/period/period-create/period-create.module#PeriodCreateModule',
+        // path: 'periodos/editar/:id',
+        path: 'periodos/editar',
+        loadChildren: '../admin/views/period/period-edit/period-edit.module#PeriodEditModule',
         pathMatch: 'prefix'
       },
+      //RUTAS - ALUMNOS
       {
-        path: 'alumnos',
-        loadChildren: '../admin/views/period/period.module#PeriodModule'
+        path: 'alumno',
+        loadChildren: '../admin/views/alumnos/alumnos.module#AlumnosModule'
+      },
+      {
+        path: 'alumno/crear',
+        loadChildren: '../admin/views/alumnos/alumnos-create/alumnos-create.module#AlumnosCreateModule'
+      },
+      {
+        path: 'alumno/list',
+        loadChildren: '../admin/views/alumnos/alumnos-list/alumnos-list.module#AlumnosListModule',
+      },
+      {
+        // path: 'alumno/editar/:id',
+        path: 'alumno/editar',
+        loadChildren: '../admin/views/alumnos/alumnos-edit/alumnos-edit.module#AlumnosEditModule',
+        pathMatch: 'prefix'
+      },
+
+      // RUTAS DOCENTES
+      {
+        path: 'docente',
+        loadChildren: '../admin/views/docentes/docentes.module#DocentesModule'
+      },
+      {
+        path: 'docente/crear',
+        loadChildren: '../admin/views/docentes/docentes-create/docentes-create.module#DocentesCreateModule'
+      },
+      {
+        path: 'docente/list',
+        loadChildren: '../admin/views/docentes/docentes-list/docentes-list.module#DocentesListModule',
+      },
+      {
+        // path: 'docente/editar/:id',
+        path: 'docente/editar',
+        loadChildren: '../admin/views/docentes/docentes-edit/docentes-edit.module#DocentesEditModule',
+        pathMatch: 'prefix'
       },
     ],
-
   }
   
 ];
