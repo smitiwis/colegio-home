@@ -30,7 +30,7 @@
 
             <!-- DNI -> Usuario -->
             <div class="form-group label-floating">
-              <label class="control-label" for="dni">DNI</label>
+              <label class="control-label" for="dni"><span class="Defaults-sort-numeric-asc"></span> DNI</label>
 
               <input [class.is-invalid]="loginForm.get('document').touched && loginForm.get('document').invalid"
                 [class.is-valid]="loginForm.get('document').valid" class="form-control" type="text" name="dni"
@@ -41,7 +41,7 @@
                   class="text-danger">
                   <span>
                     DNI es requerido ...!
-                  </span>
+                  </span> 
                 </li>
                 <li *ngIf="loginForm.get('document').invalid && loginForm.get('document').touched" class="text-danger">
                   <span>
@@ -64,9 +64,9 @@
             </div>
             <!-- Password -> Usuario -->
             <div class="form-group label-floating">
-              <label class="control-label" for="password">Contraseña</label>
+              <label class="control-label" for="password"> <span class="Defaults-lock"></span> Contraseña</label>
               <input [class.is-invalid]="loginForm.get('password').touched && loginForm.get('password').invalid"
-                [class.is-valid]="loginForm.get('password').valid" class="form-control" type="password" name="password"
+                [class.is-valid]="loginForm.get('password').valid" class="form-control Defaults-unlock-alt" type="password" name="password"
                 formControlName="password">
               <ul *ngIf="loginForm.get('password').hasError('required') && loginForm.get('password').touched"
                 class="text-danger">
