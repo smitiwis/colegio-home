@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { AlumnosCreateComponent } from './alumnos-create.component';
 import { AlumnosCreateRoutingModule } from './alumnos-create-routing.module';
+import { ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -8,6 +10,8 @@ import { AlumnosCreateRoutingModule } from './alumnos-create-routing.module';
   ],
   imports: [
     AlumnosCreateRoutingModule,
+    ReactiveFormsModule,
+    CommonModule
     
   ],
   bootstrap: [AlumnosCreateComponent],

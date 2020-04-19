@@ -8,18 +8,7 @@
 </div>
 <div class="form-group row">
   <div class="col-lg mb-3 mb-sm-0 mx-3" style="background-color: white;">
-    <pre>
-      <b>
-       {{ formDocente.value | json}}
-      </b>
-     </pre>
-    <p>
-      Estado del formulario: <b> {{ formDocente.status}}</b>
-    </p>
-    <p>
-      Validacion del formulario: <b> {{ formDocente.valid }}</b>
-    </p>
-
+  
     <form class="m-4" [formGroup]="formDocente" (ngSubmit)="guardarDocente();">
       <div class="form-group row">
         <div class="col-sm-2">
@@ -100,24 +89,19 @@
         <div class="col-sm-4">
           <input required type="password" id="passowrd" class="form-control" formControlName="passoword1Doc"
           [class.is-valid]="passoword1DocValid" [class.is-invalid]="passoword1DocInvalid">
-          <p class="Defaults-close text-danger mt-2" *ngIf="passoword1DocInvalid">
+          <p class="Defaults-close text-danger mt-2" *ngIf="formDocente.get('passoword1Doc').errors &&  formDocente.get('passoword1Doc').touched">
             <span>
-              Contraseña es requerida.
+              Contraseña minimo 5 carácteres.
             </span>
           </p>
         </div>
         <label for="passowrd2" class="col-sm-2">Repetir Password:</label>
         <div class="col-sm-4">
           <input required type="password" id="passowrd2" class="form-control" formControlName="passoword2Doc"
-          [class.is-valid]="passoword2DocValid " [class.is-invalid]="password2NoValido">
+          [class.is-valid]="passoword2DocValid && passwordIgual" [class.is-invalid]="password2NoValido && passoword2DocInvalid">
           <p class="Defaults-close text-danger mt-2" *ngIf="password2NoValido">
             <span>
               Las contraseñas son diferentes.
-            </span>
-          </p>
-          <p class="Defaults-close text-danger mt-2" *ngIf="passoword2DocInvalid">
-            <span>
-              Confirme su Contraseña.
             </span>
           </p>
         </div>

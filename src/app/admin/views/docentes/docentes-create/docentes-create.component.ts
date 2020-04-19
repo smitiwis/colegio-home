@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { isDate } from 'util';
 import { PasswordService } from 'src/app/admin/shared/services/validaciones/passowrd.service';
 
 @Component({
@@ -11,22 +10,19 @@ export class DocentesCreateComponent implements OnInit {
 
   formDocente: FormGroup;
 
-  constructor(private _formBuielder: FormBuilder,
+  constructor(private _formBuilder: FormBuilder,
     private _passwordServis: PasswordService) {
     this.crearDocente()
   }
 
   crearDocente() {
-    this.formDocente = this._formBuielder.group({
-      nombreDoc: ['Luis Angel', [Validators.required, Validators.minLength(3)]],
-      apellidoDoc: ['Peralta Diaz', [Validators.required, Validators.minLength(5)]],
-      periodoAcad: ['202020', [Validators.required, Validators.minLength(5)]],
-      fechaNacDoc: ['20/11/2000', [Validators.required]],
-      documentoDniDoc: ['11111111',
-        [
-          Validators.required,
-        ]],
-      passoword1Doc: ['', [Validators.required]],
+    this.formDocente = this._formBuilder.group({
+      nombreDoc: ['', [Validators.required, Validators.minLength(3)]],
+      apellidoDoc: ['', [Validators.required, Validators.minLength(5)]],
+      periodoAcad: ['', [Validators.required, Validators.minLength(5)]],
+      fechaNacDoc: ['', [Validators.required]],
+      documentoDniDoc: ['', [Validators.required,]],
+      passoword1Doc: ['', [Validators.required, Validators.minLength(5)]],
       passoword2Doc: ['', [Validators.required]]
     },
       {
@@ -76,19 +72,19 @@ export class DocentesCreateComponent implements OnInit {
   get passoword1DocInvalid() {
     return this.formDocente.get('passoword1Doc').invalid && this.formDocente.get('passoword1Doc').touched;
   }
-  //CONFIRMAR PASSWORD
+  //CONFIRMAR PASSWORD 2
   get passoword2DocValid() {
-    return this.formDocente.get('passoword2Doc').valid;
+    return this.formDocente.get('passoword2Doc').valid && this.formDocente.get('passoword2Doc').touched;
   }
   get passoword2DocInvalid() {
-    return  this.formDocente.get('passoword2Doc').invalid && this.formDocente.get('passoword2Doc').touched;
+    return this.formDocente.get('passoword2Doc').invalid && this.formDocente.get('passoword2Doc').touched;
   }
-  get password2NoValido(){
+  get password2NoValido() {
     const password1 = this.formDocente.get('passoword1Doc').value;
     const password2 = this.formDocente.get('passoword2Doc').value;
-   return (password1 === password2) ? false : true;
+    return (password1 === password2) ? false : true;
   }
-  get passwordIgual(){
+  get passwordIgual() {
     const password1 = this.formDocente.get('passoword1Doc').value;
     const password2 = this.formDocente.get('passoword2Doc').value;
     return (password1 === password2) ? true : false;

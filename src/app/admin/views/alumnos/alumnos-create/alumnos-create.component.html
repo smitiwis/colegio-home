@@ -1,64 +1,114 @@
 <div class=" d-flex justify-content-between mx-1">
   <div class="col-md-3 p-0">
-      <p class="separadores"><span class="Defaults-plus-circle"></span> REGISTRAR ALUMNOS</p>
+    <p class="separadores"><span class="Defaults-user"></span> REGISTRAR ALUMNOS</p>
   </div>
   <div class="col-md-9 p-0 align-self-end">
-      <hr class="linea_separador">
+    <hr class="linea_separador">
   </div>
 </div>
 <div class="form-group row">
   <div class="col-lg mb-3 mb-sm-0 mx-3" style="background-color: white;">
 
-    <form class="m-4">
-        <div class="form-group row">
-          <div class="col-sm-2">
-            <label for="nombre" class="col-form-label" > <span class="Defaults-user-md"></span> Nombres:</label>
-          </div>
-          <div class="col-sm-4">
-            <input type="text" class="form-control" id="nombre" autofocus>
-          </div>
-          <div class="col-sm-2">
-            <label for="apellidos" class="col-form-label">Apellidos:</label>
-          </div>
-          <div class="col-sm-4">
-            <input type="text" class="form-control" id="apellidos">
-          </div>
-        </div>
-        
+    <form class="m-4" [formGroup]="formAlumno" (ngSubmit)="guardarAlumno();">
+ 
       <div class="form-group row">
-          <label for="periodo-acad" class="col-sm-2 col-form-label">Periodo académico:</label>
-          <div class="col-sm-4">
-            <input type="text" class="form-control" name="periodo-acad">
-          </div>
+        <div class="col-sm-2">
+          <label for="nombre" class="col-form-label"> <span class="Defaults-user-md"></span> Nombres:</label>
+        </div>
+        <div class="col-sm-4">
+          <input type="text" class="form-control" id="nombre" formControlName="nombre"
+            [class.is-valid]="nombreAlumValid" [class.is-invalid]="nombreAlumInvalid">
 
-          <label for="fecha-nac" class="col-sm-2">Nivel académico:</label>
-          <div class="col-sm-4">
-            <select class="custom-select">
-              <option value="inicial">INICIAL</option>
-              <option value="primaria">PRIMARIA</option>
-              <option value="secundaria">SECUNDARIA</option>
-            </select>
-          </div>
+          <samp class="Defaults-close text-danger mt-2" *ngIf="nombreAlumInvalid">Nombre es requerido</samp>
+
+
+        </div>
+        <div class="col-sm-2">
+          <label for="apellidos" class="col-form-label">Apellidos:</label>
+        </div>
+        <div class="col-sm-4">
+          <input type="text" class="form-control" id="apellidos" formControlName="apellido"
+            [class.is-valid]="apellAlumValid" [class.is-invalid]="apellAlumInvalid">
+
+          <samp class="Defaults-close text-danger mt-2" *ngIf="apellAlumInvalid">Apellido es requerido</samp>
+
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="periodo-acad" class="col-sm-2 col-form-label">Periodo académico:</label>
+        <div class="col-sm-4">
+          <input type="text" class="form-control" name="periodo-acad" formControlName="periodoAcad"
+            [class.is-valid]="periodoAcadValid" [class.is-invalid]="periodoAcadInvalid">
+
+          <samp class="Defaults-close text-danger mt-2" *ngIf="periodoAcadInvalid">Periodo académico es requerido</samp>
+        </div>
+
+        <label for="fecha-nac" class="col-sm-2">Nivel académico:</label>
+        <div class="col-sm-4">
+          <select class="custom-select" formControlName="nivelAcad" [class.is-valid]="nivelAcadValid"
+            [class.is-invalid]="nivelAcadInvalid">
+            <option value="inicial">INICIAL</option>
+            <option value="primaria">PRIMARIA</option>
+            <option value="secundaria">SECUNDARIA</option>
+          </select>
+          <samp class="Defaults-close text-danger mt-2" *ngIf="nivelAcadInvalid">Selecione el nivel academico</samp>
+        </div>
       </div>
       <div class="form-group row">
-        <label for="fecha-nac"class="col-sm-2">Fecha / nac:</label>
+        <label for="fecha-nac" class="col-sm-2">Fecha / nac:</label>
         <div class="col-sm-4">
-          <input required type="date" id="fecha-nac" class="form-control">
+          <input required type="date" id="fecha-nac" class="form-control" formControlName="fechaNac"
+            [class.is-valid]="fechaNacValid" [class.is-invalid]="fechaNacInvalid">
+          <samp class="Defaults-close text-danger mt-2" *ngIf="fechaNacInvalid">Fecha de nacimiento es requerido</samp>
         </div>
+
         <label for="documento" class="col-sm-2">Nro. DNI:</label>
         <div class="col-sm-4">
-            <input required type="number" id="documento" class="form-control">
+          <input required type="text" id="documento" class="form-control" formControlName="dniDocumento"
+            [class.is-valid]="dniDocumentoValid" [class.is-invalid]="dniDocumentoInvalid" minlength="8" maxlength="8"
+            pattern="[1-9]*">
+          <p class="Defaults-close text-danger mt-2"
+            *ngIf="formAlumno.get('dniDocumento').hasError('required') && formAlumno.get('dniDocumento').touched">
+            <span>
+              DNI es requerido.
+            </span>
+          </p>
+          <p class="Defaults-close text-danger mt-2" *ngIf="dniDocumentoInvalid">
+            <span>
+              DNI debe contener 8 carácteres.
+            </span>
+          </p>
+          <p class="Defaults-close text-danger mt-2" *ngIf="formAlumno.get('dniDocumento').hasError('pattern')">
+            <span>
+              DNI debe contener solo números.
+            </span>
+          </p>
         </div>
       </div>
       <div class="form-group row">
         <label for="passowrd" class="col-sm-2">Password:</label>
         <div class="col-sm-4">
-            <input required type="password" id="passowrd" class="form-control">
+          <input required type="password" id="passowrd" class="form-control" formControlName="password1"
+          [class.is-valid]="password1Valid" [class.is-invalid]="password1Invalid">
+          <p class="Defaults-close text-danger mt-2" *ngIf="password1Invalid">
+            <span>
+              Password es requerido
+            </span>
+          </p>
         </div>
         <label for="passowrd2" class="col-sm-2">Repetir Password:</label>
         <div class="col-sm-4">
-            <input required type="password" id="passowrd2" class="form-control">
+          <input required type="password" id="passowrd2" class="form-control" formControlName="password2"
+          [class.is-valid]="password2Valid && passwordIgual" [class.is-invalid]="password2NoValido && password2Invalid">
+          <p class="Defaults-close text-danger mt-2" *ngIf="password2NoValido">
+            <span>
+              Las contraseñas son diferentes.
+            </span>
+          </p>
         </div>
+
+
       </div>
       <div class="form-group row mt-3">
         <div class="col-sm-3 text-center">
