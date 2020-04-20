@@ -9,6 +9,8 @@ declare global {
   templateUrl: './contacto.component.html',
 })
 export class ContactoComponent  {
-
+  constructor(){
+    
+  }
 
 }

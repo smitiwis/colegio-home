@@ -5,16 +5,22 @@ import { ContactoComponent } from './contacto.component';
 import { ContactenosComponent } from '../../components/contactenos/contactenos.component';
 import { RedessocialesComponent } from '../../components/redessociales/redessociales.component';
 import { FormularioyubicacionComponent } from '../../components/formularioyubicacion/formularioyubicacion.component'
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
     ContactoComponent,
     ContactenosComponent,
     RedessocialesComponent,
-    FormularioyubicacionComponent
+    FormularioyubicacionComponent,
   ],
   imports: [
-    ContactoRoutingModule
+    ContactoRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [ContactoComponent],
