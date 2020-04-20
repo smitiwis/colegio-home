@@ -4,6 +4,7 @@ import { AdminComponent } from './admin.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { LogoutComponent } from './components/logout/logout.component';
 import { AdminRoutingModule } from './admin-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { AdminRoutingModule } from './admin-routing.module';
   ],
   imports: [
     AdminRoutingModule,
-    RouterModule
+    RouterModule,
+    HttpClientModule
   ],
   bootstrap: [AdminComponent],
   exports: [AdminComponent]
