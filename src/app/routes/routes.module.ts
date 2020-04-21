@@ -90,6 +90,44 @@ const routes: Routes = [
         loadChildren: '../admin/views/docentes/docentes-edit/docentes-edit.module#DocentesEditModule',
         pathMatch: 'prefix'
       },
+
+      
+
+
+      // RUTAS DOCENTES
+      {
+        path: 'padre',
+        loadChildren: '../admin/views/padres/padres.module#PadresModule'
+      },
+      {
+        path: 'padre/crear',
+        loadChildren: '../admin/views/padres/padres-create/padres-create.module#PadresCreateModule'
+      },
+      {
+        path: 'padre/list',
+        loadChildren: '../admin/views/padres/padres-list/padres-list.module#PadresListModule',
+      },
+      {
+        // path: 'padre/editar/:id',
+        path: 'padre/editar',
+        loadChildren: '../admin/views/padres/padres-edit/padres-edit.module#PadresEditModule',
+        pathMatch: 'prefix'
+      },
+
+      //RUTAS DE PAGOS
+        {
+          path: 'pago',
+          loadChildren:'../admin/views/pagos/pago.module#PagoModule'
+        },
+        {
+          path:'pago/registrar',
+        loadChildren: '../admin/views/pagos/pago-registrar/pago-registrar.module#PagoRegistrarModule'
+          
+        }
+
+
+
+
     ],
   }
   

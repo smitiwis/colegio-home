@@ -14,17 +14,22 @@
         <div class="form-group">
           <label for="">Nombres y Apellidos:</label>
           <input class="form-control" type="text" name="nombre" formControlName="nombre"
-          [class.is-valid]="formContacto.get('nombre').valid">
+          [class.is-valid]="formContacto.get('nombre').valid"
+          [class.is-invalid]="formContacto.get('nombre').invalid && formContacto.get('nombre').touched">
         </div>
         <div class="form-group">
           <label for="">Correo Electrónico:</label>
           <input class="form-control" type="email" name="correo" formControlName="correo"
-          [class.is-valid]="formContacto.get('correo').valid">
+          [class.is-valid]="formContacto.get('correo').valid"
+          [class.is-invalid]="formContacto.get('correo').invalid && formContacto.get('correo').touched">
+
         </div>
         <div class="form-group">
           <label for="">Asunto:</label>
           <input class="form-control" type="text" name="asunto" formControlName="asunto"
-          [class.is-valid]="formContacto.get('asunto').valid">
+          [class.is-valid]="formContacto.get('asunto').valid"
+          [class.is-invalid]="formContacto.get('asunto').invalid && formContacto.get('asunto').touched">
+
         </div>
         <div class="form-group">
           <label for="">Comentario:</label>

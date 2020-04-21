@@ -1,0 +1,122 @@
+<div class=" d-flex justify-content-between mx-1">
+    <div class="col-md-3 p-0">
+      <p class="separadores"><span class="Defaults-user"></span> REGISTRAR PADRE</p>
+    </div>
+    <div class="col-md-9 p-0 align-self-end">
+      <hr class="linea_separador">
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col-lg mb-3 mb-sm-0 mx-3" style="background-color: white;">
+    
+      <form class="m-4" [formGroup]="formPadre" (ngSubmit)="guardarPadre();">
+        <div class="form-group row">
+          <div class="col-sm-2">
+            <label for="nombre" class="col-form-label">Nombres:</label>
+          </div>
+          <div class="col-sm-4">
+            <input type="text" class="form-control" id="nombre" formControlName="nombreDoc"
+              [class.is-valid]="" [class.is-invalid]="">
+            <p class="Defaults-close text-danger mt-2" *ngIf="">
+              <span>
+                Nombre es requerido.
+              </span>
+            </p>
+          </div>
+          <div class="col-sm-2">
+            <label for="apellidos" class="col-form-label">Apellidos:</label>
+          </div>
+          <div class="col-sm-4">
+            <input type="text" class="form-control" id="apellidos" formControlName="apellidoDoc"
+              [class.is-valid]="" [class.is-invalid]="">
+              <p class="Defaults-close text-danger mt-2" *ngIf="">
+                <span>
+                  Apellido es requerido.
+                </span>
+              </p>
+          </div>
+        </div>
+  
+        <div class="form-group row">
+          <label for="periodo-acad" class="col-sm-2 col-form-label">Periodo académico:</label>
+          <div class="col-sm-4">
+            <input type="text" class="form-control" name="periodo-acad" formControlName="periodoAcad"
+              [class.is-valid]="" [class.is-invalid]="">
+              <p class="Defaults-close text-danger mt-2" *ngIf="">
+                <span>
+                  Periodo académico es requerido.
+                </span>
+              </p>
+            
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="fecha-nac" class="col-sm-2">Fecha / nac:</label>
+          <div class="col-sm-4">
+            <input required type="date" id="fecha-nac" class="form-control" formControlName="fechaNacDoc"
+              [class.is-valid]="" [class.is-invalid]="">
+              <p class="Defaults-close text-danger mt-2" *ngIf="">
+                <span>
+                  Fecha es requerida.
+                </span>
+              </p>
+          </div>
+          <label for="documento" class="col-sm-2">Nro. DNI:</label>
+          <div class="col-sm-4">
+            <input required type="text" id="documento" class="form-control" formControlName="documentoDniDoc"
+              [class.is-valid]="" [class.is-invalid]="" minlength="8"
+              maxlength="8" pattern="[1-9]*">
+  
+              <p class="Defaults-close text-danger mt-2"*ngIf="">
+                <span>
+                  DNI es requerido.
+                </span>
+              </p>
+              <p class="Defaults-close text-danger mt-2" *ngIf="">
+                <span>
+                  DNI debe contener 8 carácteres.
+                </span>
+              </p>
+              <p class="Defaults-close text-danger mt-2" *ngIf="">
+                <span>
+                  DNI debe contener solo números.
+                </span>
+              </p>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="passowrd" class="col-sm-2">Password:</label>
+          <div class="col-sm-4">
+            <input required type="password" id="passowrd" class="form-control" formControlName="passoword1Doc"
+            [class.is-valid]="" [class.is-invalid]="">
+            <p class="Defaults-close text-danger mt-2" *ngIf="">
+              <span>
+                Contraseña minimo 5 carácteres.
+              </span>
+            </p>
+          </div>
+          <label for="passowrd2" class="col-sm-2">Repetir Password:</label>
+          <div class="col-sm-4">
+            <input required type="password" id="passowrd2" class="form-control" formControlName="passoword2Doc"
+            [class.is-valid]="">
+            <p class="Defaults-close text-danger mt-2" *ngIf="">
+              <span>
+                Las contraseñas son diferentes.
+              </span>
+            </p>
+          </div>
+        </div>
+        <div class="form-group row mt-3">
+          <div class="col-sm-3 text-center">
+            <button type="submit" class="btn btn-primary btn-block">Registrar</button>
+          </div>
+          <div class="col-sm-3 text-center">
+            <button type="reset" class="btn btn-info btn-block">Limpiar</button>
+          </div>
+        </div>
+      </form>
+  
+  
+  
+    </div>
+  </div>
