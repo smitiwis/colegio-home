@@ -7,7 +7,7 @@ import { PeriodoInterface } from '../../interface/periodo.interface';
 })
 
 export class PeriodoService {
-    urlDatosPeriodo
+    urlDatosPeriodo:string;
     constructor(private httpClient: HttpClient) { }
     
     datosPeriodos(periodo: any) {

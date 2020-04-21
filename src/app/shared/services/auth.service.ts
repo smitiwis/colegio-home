@@ -6,11 +6,12 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthService {
+  urlDatosAuth: string = "http://localhost:3000/login"
 
   constructor(private htppClient: HttpClient) { }
 
   login(login: any): Observable<any> {
-    return this.htppClient.post('http://localhost:3000/login', login);
+    return this.htppClient.post(this.urlDatosAuth, login);
   }
 
 }
