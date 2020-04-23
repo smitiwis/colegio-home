@@ -14,25 +14,26 @@
 
     <form class="m-4" [formGroup]="formAlumno" (ngSubmit)="guardarAlumno();">
 
-      <a class="btn btn-success mb-4" routerLink="alumno/list"> <span class="Defaults-list-alt"></span> Lista de Alumnos</a>
+      <a class="btn btn-success mb-4" routerLink="alumno/list"> <span class="Defaults-list-alt"></span> Lista de
+        Alumnos</a>
       <div class="form-group row">
-        <label for="documento" class="col-sm-2">DNI:</label>
+        <label for="documento" class="col-sm-2">*DNI:</label>
         <div class="col-sm-4">
           <input required type="text" id="documento" class="form-control" formControlName="dniDocumento"
             [class.is-valid]="dniDocumentoValid" [class.is-invalid]="dniDocumentoInvalid" minlength="8" maxlength="8"
             pattern="[1-9]*">
-          <p class="Defaults-close text-danger mt-2"
+          <p class="Defaults-times-circle text-danger mt-2"
             *ngIf="formAlumno.get('dniDocumento').hasError('required') && formAlumno.get('dniDocumento').touched">
             <span>
               DNI es requerido.
             </span>
           </p>
-          <p class="Defaults-close text-danger mt-2" *ngIf="dniDocumentoInvalid">
+          <p class="Defaults-times-circle text-danger mt-2" *ngIf="dniDocumentoInvalid">
             <span>
               DNI debe contener 8 carácteres.
             </span>
           </p>
-          <p class="Defaults-close text-danger mt-2" *ngIf="formAlumno.get('dniDocumento').hasError('pattern')">
+          <p class="Defaults-times-circle text-danger mt-2" *ngIf="formAlumno.get('dniDocumento').hasError('pattern')">
             <span>
               DNI debe contener solo números.
             </span>
@@ -42,32 +43,34 @@
       <!-- NOMBRES -->
       <div class="form-group row">
         <div class="col-sm-2">
-          <label for="nombre" class="col-form-label">Nombres:</label>
+          <label for="nombre" class="col-form-label">*Nombres:</label>
         </div>
         <div class="col-sm-4">
           <input type="text" class="form-control" id="nombre" formControlName="nombres" [class.is-valid]="nombresValid"
             [class.is-invalid]="nombresInvalid">
-          <samp class="Defaults-close text-danger mt-2" *ngIf="nombresInvalid"> Nombre es requerido</samp>
+          <samp class="Defaults-times-circle text-danger mt-3" *ngIf="nombresInvalid"> Nombre es requerido</samp>
         </div>
       </div>
       <!-- APELLIDOS -->
       <div class="from-group row">
         <div class="col-sm-2">
-          <label for="apellidos" class="col-form-label">Apellido Paterno:</label>
+          <label for="apellidos" class="col-form-label">*Apellido Paterno:</label>
         </div>
         <div class="col-sm-4">
           <input type="text" class="form-control" id="apellidos" formControlName="apellido_pat"
             [class.is-valid]="apellidoPatValid" [class.is-invalid]="apellidoPatInvalid">
-          <samp class="Defaults-close text-danger mt-2" *ngIf="apellidoPatInvalid"> Apellido paterno es requerido</samp>
+          <samp class="Defaults-times-circle text-danger mt-3" *ngIf="apellidoPatInvalid"> Apellido paterno es
+            requerido</samp>
         </div>
 
         <div class="col-sm-2">
-          <label for="apellidos" class="col-form-label">Apellido Materno:</label>
+          <label for="apellidos" class="col-form-label">*Apellido Materno:</label>
         </div>
         <div class="col-sm-4">
           <input type="text" class="form-control" id="apellidos" formControlName="apellido_mat"
             [class.is-valid]="apellidoMatValid" [class.is-invalid]="apellidoMatInvalid">
-          <samp class="Defaults-close text-danger mt-2" *ngIf="apellidoMatInvalid"> Apellido materno es requerido</samp>
+          <samp class="Defaults-times-circle text-danger mt-3" *ngIf="apellidoMatInvalid"> Apellido materno es
+            requerido</samp>
         </div>
       </div>
 
@@ -79,7 +82,7 @@
           <input type="text" class="form-control" name="periodo-acad" formControlName="periodoAcad"
             [class.is-valid]="periodoAcadValid" [class.is-invalid]="periodoAcadInvalid">
 
-          <samp class="Defaults-close text-danger mt-2" *ngIf="periodoAcadInvalid">Periodo académico es requerido</samp>
+          <samp class="Defaults-times-circle text-danger mt-2" *ngIf="periodoAcadInvalid">Periodo académico es requerido</samp>
         </div>
 
         <label for="fecha-nac" class="col-sm-2">Nivel académico:</label>
@@ -90,51 +93,61 @@
             <option value="primaria">PRIMARIA</option>
             <option value="secundaria">SECUNDARIA</option>
           </select>
-          <samp class="Defaults-close text-danger mt-2" *ngIf="nivelAcadInvalid">Selecione el nivel academico</samp>
+          <samp class="Defaults-times-circle text-danger mt-2" *ngIf="nivelAcadInvalid">Selecione el nivel academico</samp>
         </div>
       </div>
       -->
       <!-- _________________________________________--->
       <div class="form-group row mt-3">
 
-        <label for="fecha-nac" class="col-sm-2">Fecha / nac:</label>
+        <label for="fecha-nac" class="col-sm-2">*Fecha / nac:</label>
         <div class="col-sm-4">
           <input required type="date" id="fecha-nac" class="form-control" formControlName="fechaNac"
             [class.is-valid]="fechaNacValid" [class.is-invalid]="fechaNacInvalid">
-          <samp class="Defaults-close text-danger mt-2" *ngIf="fechaNacInvalid">Fecha de nacimiento es requerido</samp>
+          <p class="Defaults-times-circle text-danger mt-2" *ngIf="fechaNacInvalid">
+            <samp>Fecha de nacimiento es requerid </samp>
+          </p>
         </div>
 
-        <label for="fecha-nac" class="col-sm-2">Sexo</label>
+        <label for="fecha-nac" class="col-sm-2">*Sexo</label>
         <div class="col-sm-4">
           <select id="inputState" class="form-control" formControlName="sexo" [class.is-valid]="sexoValid"
             [class.is-invalid]="sexoInvalid">
             <option selected value="masculino">Masculino</option>
             <option value="femenino">Femenino</option>
           </select>
+          <p class="Defaults-times-circle text-danger mt-2" *ngIf="sexoInvalid">
+            <span>Especifique el sexo</span>
+          </p>
         </div>
 
-        <span class="Defaults-close text-danger mt-2" *ngIf="">Especifique el sexo</span>
 
       </div>
       <!-- PASSWORD -->
 
       <div class="form-group row">
-        <label for="passowrd" class="col-sm-2">Password:</label>
+        <label for="passowrd" class="col-sm-2"><span class="Defaults-lock"></span> Password:</label>
         <div class="col-sm-4">
-          <input required type="password" id="passowrd" class="form-control" formControlName="password1"
+          <input required type="password" id="passowrd" class="form-control " formControlName="password1"
             [class.is-valid]="password1Valid" [class.is-invalid]="password1Invalid">
-          <p class="Defaults-close text-danger mt-2" *ngIf="password1Invalid">
+            <p class="Defaults-times-circle text-danger mt-3" *ngIf="password1InvalidLength">
+              <span>
+                Password mínimo 3 carácteres.
+              </span>
+            </p>
+          <p class="Defaults-times-circle text-danger mt-3" *ngIf="password1Invalid">
             <span>
               Password es requerido
             </span>
           </p>
+          
         </div>
-        <label for="passowrd2" class="col-sm-2">Repetir Password:</label>
+        <label for="passowrd2" class="col-sm-2"><span class="Defaults-lock"></span> Repetir Password:</label>
         <div class="col-sm-4">
           <input required type="password" id="passowrd2" class="form-control" formControlName="password2"
             [class.is-valid]="password2Valid && passwordIgual"
             [class.is-invalid]="password2NoValido && password2Invalid">
-          <p class="Defaults-close text-danger mt-2" *ngIf="password2NoValido">
+          <p class="Defaults-times-circle text-danger mt-3" *ngIf="password2NoValido">
             <span>
               Las contraseñas son diferentes.
             </span>

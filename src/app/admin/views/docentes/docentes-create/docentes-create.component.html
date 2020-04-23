@@ -20,18 +20,18 @@
         <div class="col-sm-4">
           <input required type="text" id="documento" class="form-control" formControlName="dniDocumento"
             [class.is-valid]="dniDocumentoValid" [class.is-invalid]="dniDocumentoInvalid" minlength="8" maxlength="8" pattern="[1-9]*">
-          <p class="Defaults-close text-danger mt-2"
+          <p class="Defaults-times-circle text-danger mt-2"
             *ngIf="formDocente.get('dniDocumento').hasError('required') && formDocente.get('dniDocumento').touched">
             <span>
               DNI es requerido.
             </span>
           </p>
-          <p class="Defaults-close text-danger mt-2" *ngIf="dniDocumentoInvalid">
+          <p class="Defaults-times-circle text-danger mt-2" *ngIf="dniDocumentoInvalid">
             <span>
               DNI debe contener 8 carácteres.
             </span>
           </p>
-          <p class="Defaults-close text-danger mt-2" *ngIf="formDocente.get('dniDocumento').hasError('pattern')">
+          <p class="Defaults-times-circle text-danger mt-2" *ngIf="formDocente.get('dniDocumento').hasError('pattern')">
             <span>
               DNI debe contener solo números.
             </span>
@@ -46,7 +46,7 @@
         <div class="col-sm-4">
           <input type="text" class="form-control" id="nombre" formControlName="nombres"
             [class.is-valid]="nombresValid" [class.is-invalid]="nombresInvalid">
-          <samp class="Defaults-close text-danger mt-2" *ngIf="nombresInvalid"> Nombre es requerido</samp>
+          <samp class="Defaults-times-circle text-danger mt-2" *ngIf="nombresInvalid"> Nombre es requerido</samp>
         </div>
       </div>
       <!-- APELLIDOS -->
@@ -57,7 +57,7 @@
         <div class="col-sm-4">
           <input type="text" class="form-control" id="apellidos" formControlName="apellido_pat" [class.is-valid]="apellidoPatValid"
             [class.is-invalid]="apellidoPatInvalid">
-          <samp class="Defaults-close text-danger mt-2" *ngIf="apellidoPatInvalid"> Apellido paterno es requerido</samp>
+          <samp class="Defaults-times-circle text-danger mt-2" *ngIf="apellidoPatInvalid"> Apellido paterno es requerido</samp>
         </div>
 
         <div class="col-sm-2">
@@ -66,7 +66,7 @@
         <div class="col-sm-4">
           <input type="text" class="form-control" id="apellidos" formControlName="apellido_mat" [class.is-valid]="apellidoMatValid"
             [class.is-invalid]="apellidoMatInvalid">
-          <samp class="Defaults-close text-danger mt-2" *ngIf="apellidoMatInvalid"> Apellido materno es requerido</samp>
+          <samp class="Defaults-times-circle text-danger mt-2" *ngIf="apellidoMatInvalid"> Apellido materno es requerido</samp>
         </div>
       </div>
 
@@ -78,7 +78,7 @@
           <input type="text" class="form-control" name="periodo-acad" formControlName="periodoAcad"
             [class.is-valid]="periodoAcadValid" [class.is-invalid]="periodoAcadInvalid">
 
-          <samp class="Defaults-close text-danger mt-2" *ngIf="periodoAcadInvalid">Periodo académico es requerido</samp>
+          <samp class="Defaults-times-circle text-danger mt-2" *ngIf="periodoAcadInvalid">Periodo académico es requerido</samp>
         </div>
 
         <label for="fecha-nac" class="col-sm-2">Nivel académico:</label>
@@ -89,7 +89,7 @@
             <option value="primaria">PRIMARIA</option>
             <option value="secundaria">SECUNDARIA</option>
           </select>
-          <samp class="Defaults-close text-danger mt-2" *ngIf="nivelAcadInvalid">Selecione el nivel academico</samp>
+          <samp class="Defaults-times-circle text-danger mt-2" *ngIf="nivelAcadInvalid">Selecione el nivel academico</samp>
         </div>
       </div>
       -->
@@ -99,14 +99,14 @@
         <div class="col-sm-4">
           <input required type="email" id="correo" class="form-control" formControlName="correo"
             [class.is-valid]="correoValid" [class.is-invalid]="correoInvalid">
-          <samp class="Defaults-close text-danger mt-2" *ngIf="correoInvalid"> El "Correo" es requerido</samp>
+          <samp class="Defaults-times-circle text-danger mt-2" *ngIf="correoInvalid"> El "Correo" es requerido</samp>
         </div>
 
         <label for="celular" class="col-sm-2">Celular:</label>
         <div class="col-sm-4">
           <input required type="email" id="celular" class="form-control" formControlName="celular"
             [class.is-valid]="celularValid" maxlength="9" pattern="[1-9]*">
-            <p class="Defaults-close text-danger mt-2" *ngIf="formDocente.get('celular').hasError('pattern')">
+            <p class="Defaults-times-circle text-danger mt-2" *ngIf="formDocente.get('celular').hasError('pattern')">
               <span>
                 Celular requiere números.
               </span>
@@ -122,7 +122,7 @@
         <div class="col-sm-4">
           <input required type="date" id="fecha-nac" class="form-control" formControlName="fechaNac"
             [class.is-valid]="fechaNacValid" [class.is-invalid]="fechaNacInvalid">
-          <samp class="Defaults-close text-danger mt-2" *ngIf="fechaNacInvalid"> Fecha de nacimiento es requerido</samp>
+          <samp class="Defaults-times-circle text-danger mt-2" *ngIf="fechaNacInvalid"> Fecha de nacimiento es requerido</samp>
         </div>
 
         <label for="fecha-nac" class="col-sm-2">*Sexo</label>
@@ -132,7 +132,7 @@
             <option selected value="masculino">Masculino</option>
             <option value="femenino">Femenino</option>
           </select>
-          <span class="Defaults-close text-danger mt-2" *ngIf="sexoInvalid"> Especifique el sexo</span>
+          <span class="Defaults-times-circle text-danger mt-2" *ngIf="sexoInvalid"> Especifique el sexo</span>
         </div>
         
         
@@ -144,12 +144,12 @@
         <div class="col-sm-4">
           <input required type="password" id="passowrd" class="form-control" formControlName="password1"
             [class.is-valid]="password1Valid" [class.is-invalid]="password1Invalid" minlength="3">
-          <p class="Defaults-close text-danger mt-2" *ngIf="password1Invalid">
+          <p class="Defaults-times-circle text-danger mt-2" *ngIf="password1Invalid">
             <span>
               Password es requerido
             </span>
           </p>
-          <p class="Defaults-close text-danger mt-2" *ngIf="formDocente.get('password1').hasError('minlength')">
+          <p class="Defaults-times-circle text-danger mt-2" *ngIf="formDocente.get('password1').hasError('minlength')">
             <span>
               Password requiere min 3 carácteres.
             </span>
@@ -160,7 +160,7 @@
           <input required type="password" id="passowrd2" class="form-control" formControlName="password2"
             [class.is-valid]="password2Valid && passwordIgual"
             [class.is-invalid]="password2NoValido && password2Invalid">
-          <p class="Defaults-close text-danger mt-2" *ngIf="password2NoValido">
+          <p class="Defaults-times-circle text-danger mt-2" *ngIf="password2NoValido">
             <span>
               Las contraseñas son diferentes.
             </span>

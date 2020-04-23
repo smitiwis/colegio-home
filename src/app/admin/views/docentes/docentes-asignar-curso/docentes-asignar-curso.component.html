@@ -1,1 +1,133 @@
-<h3>Asigna curso al docente</h3>
+<div class=" d-flex justify-content-between mx-1">
+  <div class="col-md-3 p-0">
+    <p class="separadores"><span class="Defaults-book"> </span> ASIGNAR CURSO AL DOCENTE <span
+      class="Defaults-user"></span></p> 
+  </div>
+  <div class="col-md-9 p-0 align-self-end">
+    <hr class="linea_separador">
+  </div>
+</div>
+
+<div class=" row mx-5">
+  <div class="col">
+    <form class="m-4" [formGroup]="formAsginarCursoDocent" (ngSubmit)="guardarAsigCursDocent()">
+
+      <div class="form-group row">
+        <div class="col-sm-3">
+          <label for="documento"><span class="Defaults-sort-numeric-asc"></span> DNI - DOCENTE</label>
+        </div>
+        <div class="col-sm-5">
+          <input type="text" id="documento" class="form-control" formControlName="dniDocumento"
+            [class.is-valid]="" [class.is-invalid]="" minlength="8" maxlength="8" pattern="[1-9]*">
+        </div>
+        <div class="col-sm-4">
+          <button type="button" class="btn btn-outline-success btn-block"><span class="Defaults-search"></span> Buscar</button>
+        </div>
+      </div>
+      <div>
+        <h3>Presentar datos del docente registrado segun el DNI</h3>
+      </div>
+    </form>
+  </div>
+  <div class="col">
+    <div class=" d-flex justify-content-between mx-1">
+      <div class="col-md-3 p-0 align-self-end">
+        <hr class="linea_separador">
+      </div>
+      <div class="col-md-6 p-0">
+        <p class="separadores text-center"> DATOS DE ASIGNACIÓN DE CURSOS</p>
+      </div>
+      <div class="col-md-3 p-0 align-self-end">
+        <hr class="linea_separador">
+      </div>
+    </div>
+
+    <form [formGroup]="formAsginarCursoDocent">
+      <div class="row">
+        <div class="col-sm">
+          <div>
+            <label for="">Periodo académico:</label>
+          </div>
+          <div>
+            <select class="custom-select custom-select-lg mb-3">
+              <option value="1" Periodo>2020</option>
+              <option value="2">2021</option>
+              <option value="3">2022</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div>
+            <label for="">Nivel académico:</label>
+          </div>
+          <div>
+            <select class="custom-select custom-select-lg mb-3">
+              <option value="1" selected>Inical</option>
+              <option value="2">Primaria</option>
+              <option value="3">Secundaria</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+
+        <div class="col-sm">
+          <div>
+            <label for="">Grado académico:</label>
+          </div>
+          <div>
+            <select class="custom-select custom-select-lg mb-3">
+              <option value="1" selected>primero</option>
+              <option value="2">Segundo</option>
+              <option value="3">Tercero</option>
+              <option value="3">Cuarto</option>
+              <option value="3">Quinto</option>
+              <option value="3">Sexto</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div>
+            <label for="">Sección académico:</label>
+          </div>
+          <div>
+            <select class="custom-select custom-select-lg mb-3">
+              <option value="1" selected>A</option>
+              <option value="2">B</option>
+              <option value="3">C</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+
+        <div class="col-sm">
+          <div>
+            <label for="">Selecionar cursos</label>
+          </div>
+          <div>
+            <select class="custom-select custom-select-lg mb-3">
+              <option value="1" selected>Álgebra</option>
+              <option value="2">Geómetria</option>
+              <option value="3">História</option>
+              <option value="3">Filosofía</option>
+              <option value="3">Raz. Matemático</option>
+              <option value="3">Raz. Verbal</option>
+            </select>
+          </div>
+        </div>
+     
+      </div>
+
+      <div class="row">
+        
+        <div class="col">
+          <button type="button" class="btn btn-outline-primary btn-block py-3">ASIGNAR</button>
+        </div>
+      </div>
+
+
+    </form>
+  </div>
+</div>

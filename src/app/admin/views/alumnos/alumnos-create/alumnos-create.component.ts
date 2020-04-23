@@ -15,6 +15,7 @@ export class AlumnosCreateComponent implements OnInit {
 
   constructor(private _formBuilder: FormBuilder, private _passwordValid: PasswordService) {
     this.crearAlumno();
+    console.log(this.formAlumno)
   }
   crearAlumno() {
     this.formAlumno = this._formBuilder.group({
@@ -30,9 +31,14 @@ export class AlumnosCreateComponent implements OnInit {
       {
         validators: this._passwordValid.validarPaswords("password1", "password2"),
       })
-    console.log(this.formAlumno)
+   
   }
   // VALIDACIONES DEL FORMULARIO
+
+  // DNI
+  get dniDocumentoValid() { return this.formAlumno.get('dniDocumento').valid }
+  get dniDocumentoInvalid() { return this.formAlumno.get('dniDocumento').invalid && this.formAlumno.get('dniDocumento').touched }
+
   //NOMBRE VALIDAR
   get nombresValid() { return this.formAlumno.get('nombres').valid }
   get nombresInvalid() { return this.formAlumno.get('nombres').invalid && this.formAlumno.get('nombres').touched }
@@ -52,17 +58,14 @@ export class AlumnosCreateComponent implements OnInit {
   get fechaNacValid() { return this.formAlumno.get('fechaNac').valid }
   get fechaNacInvalid() { return this.formAlumno.get('fechaNac').invalid && this.formAlumno.get('fechaNac').touched }
 
-  // DNI
-  get dniDocumentoValid() { return this.formAlumno.get('dniDocumento').valid }
-  get dniDocumentoInvalid() { return this.formAlumno.get('dniDocumento').invalid && this.formAlumno.get('dniDocumento').touched }
-
-
   //VALIDAR CONTRASEÑAS
   get password1Valid() { return this.formAlumno.get('password1').valid }
   get password1Invalid() { return this.formAlumno.get('password1').invalid && this.formAlumno.get('password1').touched }
+  get password1InvalidLength() { return this.formAlumno.get('password1').hasError("minlength") }
+
 
   //CONFIRMAR PASSWORD 2
-  get password2Valid() { return this.formAlumno.get('password2').valid && this.formAlumno.get('password2').touched }
+  get password2Valid() { return this.formAlumno.get('password2').valid && this.formAlumno.get('password2').pristine }
   get password2Invalid() { return this.formAlumno.get('password2').invalid && this.formAlumno.get('password2').touched }
 
   get password2NoValido() {

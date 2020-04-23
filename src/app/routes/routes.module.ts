@@ -102,7 +102,7 @@ const routes: Routes = [
       
 
 
-      // RUTAS DOCENTES
+      // RUTAS PADRES
       {
         path: 'padre',
         loadChildren: '../admin/views/padres/padres.module#PadresModule'
@@ -129,11 +129,15 @@ const routes: Routes = [
       //RUTAS DE CURSOS
       {
         path: 'curso',
-        loadChildren: '../admin/views/curso/cursos.module#CursosModule'
+        loadChildren: '../admin/views/cursos/cursos.module#CursosModule'
       },
       {
         path: 'curso/crear',
-        loadChildren: '../admin/views/curso/cursos-create/cursos-create.module#CursosCreateModule'
+        loadChildren: '../admin/views/cursos/cursos-create/cursos-create.module#CursosCreateModule'
+      },
+      {
+        path: 'curso/list',
+        loadChildren: '../admin/views/cursos/cursos-list/cursos-list.module#CursosListModule',
       },
 
 
