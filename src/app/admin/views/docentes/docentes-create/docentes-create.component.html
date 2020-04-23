@@ -1,122 +1,185 @@
+<!-- REGISTRAR ALUMNOS -->
 <div class=" d-flex justify-content-between mx-1">
   <div class="col-md-3 p-0">
-    <p class="separadores"><span class="Defaults-user"></span> REGISTRAR DOCENTES</p>
+    <p class="separadores"><span class="Defaults-user"></span> REGISTRAR DOCENTE</p>
   </div>
   <div class="col-md-9 p-0 align-self-end">
     <hr class="linea_separador">
   </div>
 </div>
+
 <div class="form-group row">
   <div class="col-lg mb-3 mb-sm-0 mx-3" style="background-color: white;">
-  
+    <!-- FORMULARIO DE LOS ALUMNOS -->
+   
     <form class="m-4" [formGroup]="formDocente" (ngSubmit)="guardarDocente();">
+      <a class="btn btn-success mb-4" routerLink="docente/list"> <span class="Defaults-list-alt"></span> Lista de Docentes</a>
+      
       <div class="form-group row">
-        <div class="col-sm-2">
-          <label for="nombre" class="col-form-label">Nombres:</label>
-        </div>
+        <label for="documento" class="col-sm-2">*DNI:</label>
         <div class="col-sm-4">
-          <input type="text" class="form-control" id="nombre" formControlName="nombreDoc"
-            [class.is-valid]="nombreDocValid" [class.is-invalid]="nombreDocInvalid">
-          <p class="Defaults-close text-danger mt-2" *ngIf="nombreDocInvalid">
+          <input required type="text" id="documento" class="form-control" formControlName="dniDocumento"
+            [class.is-valid]="dniDocumentoValid" [class.is-invalid]="dniDocumentoInvalid" minlength="8" maxlength="8" pattern="[1-9]*">
+          <p class="Defaults-close text-danger mt-2"
+            *ngIf="formDocente.get('dniDocumento').hasError('required') && formDocente.get('dniDocumento').touched">
             <span>
-              Nombre es requerido.
+              DNI es requerido.
+            </span>
+          </p>
+          <p class="Defaults-close text-danger mt-2" *ngIf="dniDocumentoInvalid">
+            <span>
+              DNI debe contener 8 carácteres.
+            </span>
+          </p>
+          <p class="Defaults-close text-danger mt-2" *ngIf="formDocente.get('dniDocumento').hasError('pattern')">
+            <span>
+              DNI debe contener solo números.
             </span>
           </p>
         </div>
+      </div>
+      <!-- NOMBRES -->
+      <div class="form-group row">
         <div class="col-sm-2">
-          <label for="apellidos" class="col-form-label">Apellidos:</label>
+          <label for="nombre" class="col-form-label">*Nombres:</label>
         </div>
         <div class="col-sm-4">
-          <input type="text" class="form-control" id="apellidos" formControlName="apellidoDoc"
-            [class.is-valid]="apellidoDocValid" [class.is-invalid]="apellidoDocInvalid">
-            <p class="Defaults-close text-danger mt-2" *ngIf="apellidoDocInvalid">
-              <span>
-                Apellido es requerido.
-              </span>
-            </p>
+          <input type="text" class="form-control" id="nombre" formControlName="nombres"
+            [class.is-valid]="nombresValid" [class.is-invalid]="nombresInvalid">
+          <samp class="Defaults-close text-danger mt-2" *ngIf="nombresInvalid"> Nombre es requerido</samp>
+        </div>
+      </div>
+      <!-- APELLIDOS -->
+      <div class="from-group row">
+        <div class="col-sm-2">
+          <label for="apellidos" class="col-form-label">*Apellido Paterno:</label>
+        </div>
+        <div class="col-sm-4">
+          <input type="text" class="form-control" id="apellidos" formControlName="apellido_pat" [class.is-valid]="apellidoPatValid"
+            [class.is-invalid]="apellidoPatInvalid">
+          <samp class="Defaults-close text-danger mt-2" *ngIf="apellidoPatInvalid"> Apellido paterno es requerido</samp>
+        </div>
+
+        <div class="col-sm-2">
+          <label for="apellidos" class="col-form-label">*Apellido Materno:</label>
+        </div>
+        <div class="col-sm-4">
+          <input type="text" class="form-control" id="apellidos" formControlName="apellido_mat" [class.is-valid]="apellidoMatValid"
+            [class.is-invalid]="apellidoMatInvalid">
+          <samp class="Defaults-close text-danger mt-2" *ngIf="apellidoMatInvalid"> Apellido materno es requerido</samp>
         </div>
       </div>
 
+      <!-- EL PERIODO ACADEMICO NO ENTRA EN FORMULARIO DE CREACION DE ALUNOS -->
+      <!--  
       <div class="form-group row">
         <label for="periodo-acad" class="col-sm-2 col-form-label">Periodo académico:</label>
         <div class="col-sm-4">
           <input type="text" class="form-control" name="periodo-acad" formControlName="periodoAcad"
             [class.is-valid]="periodoAcadValid" [class.is-invalid]="periodoAcadInvalid">
-            <p class="Defaults-close text-danger mt-2" *ngIf="periodoAcadInvalid">
-              <span>
-                Periodo académico es requerido.
-              </span>
-            </p>
-          
-        </div>
-      </div>
-      <div class="form-group row">
-        <label for="fecha-nac" class="col-sm-2">Fecha / nac:</label>
-        <div class="col-sm-4">
-          <input required type="date" id="fecha-nac" class="form-control" formControlName="fechaNacDoc"
-            [class.is-valid]="fechaNacDocValid" [class.is-invalid]="fechaNacDocInvalid">
-            <p class="Defaults-close text-danger mt-2" *ngIf="fechaNacDocInvalid">
-              <span>
-                Fecha es requerida.
-              </span>
-            </p>
-        </div>
-        <label for="documento" class="col-sm-2">Nro. DNI:</label>
-        <div class="col-sm-4">
-          <input required type="text" id="documento" class="form-control" formControlName="documentoDniDoc"
-            [class.is-valid]="documentoDniDocValid" [class.is-invalid]="documentoDniDocInvalid" minlength="8"
-            maxlength="8" pattern="[1-9]*">
 
-            <p class="Defaults-close text-danger mt-2" *ngIf="formDocente.get('documentoDniDoc').hasError('required') && formDocente.get('documentoDniDoc').touched">
-              <span>
-                DNI es requerido.
-              </span>
-            </p>
-            <p class="Defaults-close text-danger mt-2" *ngIf="documentoDniDocInvalid">
-              <span>
-                DNI debe contener 8 carácteres.
-              </span>
-            </p>
-            <p class="Defaults-close text-danger mt-2" *ngIf="formDocente.get('documentoDniDoc').hasError('pattern')">
-              <span>
-                DNI debe contener solo números.
-              </span>
-            </p>
+          <samp class="Defaults-close text-danger mt-2" *ngIf="periodoAcadInvalid">Periodo académico es requerido</samp>
+        </div>
+
+        <label for="fecha-nac" class="col-sm-2">Nivel académico:</label>
+        <div class="col-sm-4">
+          <select class="custom-select" formControlName="nivelAcad" [class.is-valid]="nivelAcadValid"
+            [class.is-invalid]="nivelAcadInvalid">
+            <option value="inicial">INICIAL</option>
+            <option value="primaria">PRIMARIA</option>
+            <option value="secundaria">SECUNDARIA</option>
+          </select>
+          <samp class="Defaults-close text-danger mt-2" *ngIf="nivelAcadInvalid">Selecione el nivel academico</samp>
         </div>
       </div>
-      <div class="form-group row">
-        <label for="passowrd" class="col-sm-2">Password:</label>
+      -->
+      <!-- ************************************************************-->
+      <div class="form-group row mt-3">
+        <label for="fecha-nac" class="col-sm-2">*Correo:</label>
         <div class="col-sm-4">
-          <input required type="password" id="passowrd" class="form-control" formControlName="passoword1Doc"
-          [class.is-valid]="passoword1DocValid" [class.is-invalid]="passoword1DocInvalid">
-          <p class="Defaults-close text-danger mt-2" *ngIf="formDocente.get('passoword1Doc').errors &&  formDocente.get('passoword1Doc').touched">
+          <input required type="email" id="correo" class="form-control" formControlName="correo"
+            [class.is-valid]="correoValid" [class.is-invalid]="correoInvalid">
+          <samp class="Defaults-close text-danger mt-2" *ngIf="correoInvalid"> El "Correo" es requerido</samp>
+        </div>
+
+        <label for="celular" class="col-sm-2">Celular:</label>
+        <div class="col-sm-4">
+          <input required type="email" id="celular" class="form-control" formControlName="celular"
+            [class.is-valid]="celularValid" maxlength="9" pattern="[1-9]*">
+            <p class="Defaults-close text-danger mt-2" *ngIf="formDocente.get('celular').hasError('pattern')">
+              <span>
+                Celular requiere números.
+              </span>
+            </p>
+
+        </div>
+
+      </div>
+
+      <div class="form-group row mt-3">
+
+        <label for="fecha-nac" class="col-sm-2">*Fecha / nac:</label>
+        <div class="col-sm-4">
+          <input required type="date" id="fecha-nac" class="form-control" formControlName="fechaNac"
+            [class.is-valid]="fechaNacValid" [class.is-invalid]="fechaNacInvalid">
+          <samp class="Defaults-close text-danger mt-2" *ngIf="fechaNacInvalid"> Fecha de nacimiento es requerido</samp>
+        </div>
+
+        <label for="fecha-nac" class="col-sm-2">*Sexo</label>
+        <div class="col-sm-4">
+          <select id="inputState" class="form-control" formControlName="sexo" 
+          [class.is-valid]="sexoValid" [class.is-invalid]="sexoInvalid">
+            <option selected value="masculino">Masculino</option>
+            <option value="femenino">Femenino</option>
+          </select>
+          <span class="Defaults-close text-danger mt-2" *ngIf="sexoInvalid"> Especifique el sexo</span>
+        </div>
+        
+        
+      </div>
+      <!-- PASSWORD -->
+
+      <div class="form-group row">
+        <label for="passowrd" class="col-sm-2">*Password:</label>
+        <div class="col-sm-4">
+          <input required type="password" id="passowrd" class="form-control" formControlName="password1"
+            [class.is-valid]="password1Valid" [class.is-invalid]="password1Invalid" minlength="3">
+          <p class="Defaults-close text-danger mt-2" *ngIf="password1Invalid">
             <span>
-              Contraseña minimo 5 carácteres.
+              Password es requerido
+            </span>
+          </p>
+          <p class="Defaults-close text-danger mt-2" *ngIf="formDocente.get('password1').hasError('minlength')">
+            <span>
+              Password requiere min 3 carácteres.
             </span>
           </p>
         </div>
-        <label for="passowrd2" class="col-sm-2">Repetir Password:</label>
+        <label for="passowrd2" class="col-sm-2">*Repetir Password:</label>
         <div class="col-sm-4">
-          <input required type="password" id="passowrd2" class="form-control" formControlName="passoword2Doc"
-          [class.is-valid]="passoword2DocValid && passwordIgual" [class.is-invalid]="password2NoValido && passoword2DocInvalid">
+          <input required type="password" id="passowrd2" class="form-control" formControlName="password2"
+            [class.is-valid]="password2Valid && passwordIgual"
+            [class.is-invalid]="password2NoValido && password2Invalid">
           <p class="Defaults-close text-danger mt-2" *ngIf="password2NoValido">
             <span>
               Las contraseñas son diferentes.
             </span>
           </p>
         </div>
+
+
       </div>
+
+      <!-- BOTONES -->
       <div class="form-group row mt-3">
         <div class="col-sm-3 text-center">
-          <button type="submit" class="btn btn-primary btn-block">Registrar</button>
+          <button type="submit"  [disabled]="!formDocente.valid" class="btn btn-outline-primary btn-block">Registrar Docente</button>
         </div>
         <div class="col-sm-3 text-center">
-          <button type="reset" class="btn btn-info btn-block">Limpiar</button>
+          <button type="reset" class="btn btn-info btn-block">Limpiar Campos</button>
         </div>
       </div>
     </form>
-
-
 
   </div>
 </div>

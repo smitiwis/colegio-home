@@ -70,6 +70,10 @@ const routes: Routes = [
         loadChildren: '../admin/views/alumnos/alumnos-edit/alumnos-edit.module#AlumnosEditModule',
         pathMatch: 'prefix'
       },
+      {
+        path: 'alumno/matricula',
+        loadChildren: '../admin/views/alumnos/alumnos-matricular/alumnos-matricular.module#AlumnosMatricularModule',
+      },
 
       // RUTAS DOCENTES
       {
@@ -83,6 +87,10 @@ const routes: Routes = [
       {
         path: 'docente/list',
         loadChildren: '../admin/views/docentes/docentes-list/docentes-list.module#DocentesListModule',
+      },
+      {
+        path: 'docente/asignar',
+        loadChildren: '../admin/views/docentes/docentes-asignar-curso/docentes-asignar-curso.module#DocentesAsignarCursoModule',
       },
       {
         // path: 'docente/editar/:id',
@@ -108,11 +116,26 @@ const routes: Routes = [
         loadChildren: '../admin/views/padres/padres-list/padres-list.module#PadresListModule',
       },
       {
+        path: 'padre/relacionar',
+        loadChildren: '../admin/views/padres/padres-relacionar/padres-relacionar.module#PadresRelacionarModule',
+      },
+      {
         // path: 'padre/editar/:id',
         path: 'padre/editar',
         loadChildren: '../admin/views/padres/padres-edit/padres-edit.module#PadresEditModule',
         pathMatch: 'prefix'
       },
+
+      //RUTAS DE CURSOS
+      {
+        path: 'curso',
+        loadChildren: '../admin/views/curso/cursos.module#CursosModule'
+      },
+      {
+        path: 'curso/crear',
+        loadChildren: '../admin/views/curso/cursos-create/cursos-create.module#CursosCreateModule'
+      },
+
 
       //RUTAS DE PAGOS
         {

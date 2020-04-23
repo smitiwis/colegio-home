@@ -9,95 +9,92 @@ import { PasswordService } from 'src/app/admin/shared/services/validaciones/pass
 export class DocentesCreateComponent implements OnInit {
 
   formDocente: FormGroup;
+  guardarDocente() {
+  }
+  ngOnInit() {
+  }
 
-  constructor(private _formBuilder: FormBuilder,
-    private _passwordServis: PasswordService) {
+
+  constructor(private _formBuilder: FormBuilder, private _passwordValid: PasswordService) {
     this.crearDocente()
   }
 
   crearDocente() {
     this.formDocente = this._formBuilder.group({
-      nombreDoc: ['', [Validators.required, Validators.minLength(3)]],
-      apellidoDoc: ['', [Validators.required, Validators.minLength(5)]],
-      periodoAcad: ['', [Validators.required, Validators.minLength(5)]],
-      fechaNacDoc: ['', [Validators.required]],
-      documentoDniDoc: ['', [Validators.required,]],
-      passoword1Doc: ['', [Validators.required, Validators.minLength(5)]],
-      passoword2Doc: ['', [Validators.required]]
+      dniDocumento: ['', [Validators.required]],
+      nombres: ['', [Validators.required, Validators.minLength(3), Validators.pattern('[a-zA-Z ]*')]],
+      apellido_pat: ['', [Validators.required, Validators.minLength(3)]],
+      apellido_mat: ['', [Validators.required, Validators.minLength(3)]],
+      correo: ['', [Validators.required, Validators.email]],
+      celular: [''],
+      fechaNac: ['', [Validators.required,]],
+      sexo: ['', [Validators.required]],
+      password1: ['', Validators.required ],
+      password2: ['', [Validators.required,]]
     },
       {
-        validators: this._passwordServis.validarPaswords("passoword1Doc", "passoword2Doc"),
+        validators: this._passwordValid.validarPaswords("password1", "password2"),
       })
+    console.log(this.formDocente)
+  }
+  // VALIDACIONES DEL FORMULARIO
+  //NOMBRE VALIDAR
+  get nombresValid() { return this.formDocente.get('nombres').valid }
+  get nombresInvalid() { return this.formDocente.get('nombres').invalid && this.formDocente.get('nombres').touched }
 
-  }
-  // VALIDAR NOMBRE
-  get nombreDocValid() {
-    return this.formDocente.get('nombreDoc').valid
-  }
-  get nombreDocInvalid() {
-    return this.formDocente.get('nombreDoc').invalid && this.formDocente.get('nombreDoc').touched;
-  }
-  //VALIDAR APELLIDOS
-  get apellidoDocValid() {
-    return this.formDocente.get('apellidoDoc').valid
-  }
-  get apellidoDocInvalid() {
-    return this.formDocente.get('apellidoDoc').invalid && this.formDocente.get('apellidoDoc').touched;
-  }
-  //VALIDACIONES PARA EL PERIODO ACADEMICO
-  get periodoAcadValid() {
-    return this.formDocente.get('periodoAcad').valid
-  }
-  get periodoAcadInvalid() {
-    return this.formDocente.get('periodoAcad').invalid && this.formDocente.get('periodoAcad').touched;
-  }
-  //VALIDACIONES DE FECHAS
-  get fechaNacDocValid() {
-    return this.formDocente.get('fechaNacDoc').valid
-  }
-  get fechaNacDocInvalid() {
-    return this.formDocente.get('fechaNacDoc').invalid && this.formDocente.get('fechaNacDoc').touched;
-  }
-  // VALIDAR EL DNI DEL DOCENTE
-  get documentoDniDocValid() {
-    return this.formDocente.get('documentoDniDoc').valid
-  }
-  get documentoDniDocInvalid() {
-    return this.formDocente.get('documentoDniDoc').invalid && this.formDocente.get('documentoDniDoc').touched;
-  }
+  // APELLIDO VALIDAR 
+  get apellidoPatValid() { return this.formDocente.get('apellido_pat').valid }
+  get apellidoPatInvalid() { return this.formDocente.get('apellido_pat').invalid && this.formDocente.get('apellido_pat').touched }
+
+  get apellidoMatValid() { return this.formDocente.get('apellido_mat').valid }
+  get apellidoMatInvalid() { return this.formDocente.get('apellido_mat').invalid && this.formDocente.get('apellido_mat').touched }
+
+  // VALIDAR CORREO
+  get correoValid() { return this.formDocente.get('correo').valid }
+  get correoInvalid() { return this.formDocente.get('correo').invalid && this.formDocente.get('correo').touched}
+
+  // VALIDAR CELULAR
+  get celularValid(){ return this.formDocente.get('celular').valid}
+  // Celular es opcional
+  /* get celularInvalid() { return this.formDocente.get('celular').invalid && this.formDocente.get('celular').touched} */
+
+  //VALIDAR SEXO
+  get sexoValid() { return this.formDocente.get('sexo').valid }
+  get sexoInvalid() { return this.formDocente.get('sexo').invalid && this.formDocente.get('sexo').touched }
+
+  //VALIDAR FECHAS
+  get fechaNacValid() { return this.formDocente.get('fechaNac').valid }
+  get fechaNacInvalid() { return this.formDocente.get('fechaNac').invalid && this.formDocente.get('fechaNac').touched }
+
+  // DNI
+  get dniDocumentoValid() { return this.formDocente.get('dniDocumento').valid }
+  get dniDocumentoInvalid() { return this.formDocente.get('dniDocumento').invalid && this.formDocente.get('dniDocumento').touched }
+
   //VALIDAR CONTRASEÑAS
-  get passoword1DocValid() {
-    return this.formDocente.get('passoword1Doc').valid;
-  }
-  get passoword1DocInvalid() {
-    return this.formDocente.get('passoword1Doc').invalid && this.formDocente.get('passoword1Doc').touched;
-  }
+  get password1Valid() { return this.formDocente.get('password1').valid }
+  get password1Invalid() { return this.formDocente.get('password1').invalid && this.formDocente.get('password1').touched }
+
   //CONFIRMAR PASSWORD 2
-  get passoword2DocValid() {
-    return this.formDocente.get('passoword2Doc').valid && this.formDocente.get('passoword2Doc').touched;
-  }
-  get passoword2DocInvalid() {
-    return this.formDocente.get('passoword2Doc').invalid && this.formDocente.get('passoword2Doc').touched;
-  }
+  get password2Valid() { return this.formDocente.get('password2').valid && this.formDocente.get('password2').touched }
+  get password2Invalid() { return this.formDocente.get('password2').invalid && this.formDocente.get('password2').touched }
+
   get password2NoValido() {
-    const password1 = this.formDocente.get('passoword1Doc').value;
-    const password2 = this.formDocente.get('passoword2Doc').value;
+    const password1 = this.formDocente.get('password1').value;
+    const password2 = this.formDocente.get('password2').value;
     return (password1 === password2) ? false : true;
   }
   get passwordIgual() {
-    const password1 = this.formDocente.get('passoword1Doc').value;
-    const password2 = this.formDocente.get('passoword2Doc').value;
+    const password1 = this.formDocente.get('password1').value;
+    const password2 = this.formDocente.get('password2').value;
     return (password1 === password2) ? true : false;
   }
-  guardarDocente() {
-
-
-  }
 
 
 
 
-  ngOnInit() {
-  }
+
+
+
+
 
 }

@@ -22,7 +22,7 @@
 
   <!-- Heading -->
   <div class="sidebar-heading">
-    Mantenimiento
+    ADMINISTRACIÓN
   </div>
 
   <!-- Nav Item - Pages Collapse Menu -->
@@ -40,14 +40,14 @@
         <!--NAV DE PERIODOS-->
         <ul class="navbar-nav mr-auto navul">
           <li class="nav-item" routerLinkActive="active">
-            <a class="collapse-item" routerLink="periodos/crear">Nuevo Periodo</a>
+            <a class="collapse-item" routerLink="periodos/crear">Registrar</a>
           </li>
           <li class="nav-item " routerLinkActive="active">
-            <a class="collapse-item" routerLink="periodos/list">Lista de Periodos</a>
+            <a class="collapse-item" routerLink="periodos/list">Lista</a>
           </li>
-          <li class="nav-item " routerLinkActive="active">
-            <a class="collapse-item" routerLink="periodos/editar">Editar Periodo</a>
-          </li>
+       <!--    <li class="nav-item " routerLinkActive="active">
+            <a class="collapse-item" routerLink="periodos/editar">Editar</a>
+          </li> -->
         </ul>
 
         <!-- <h6 class="collapse-header">Other Pages:</h6>
@@ -71,18 +71,53 @@
         <!--NAV DE DOCENTES-->
         <ul class="navbar-nav mr-auto navul">
           <li class="nav-item" routerLinkActive="active">
-            <a class="collapse-item" routerLink="docente/crear">Nuevo Docente</a>
+            <a class="collapse-item" routerLink="docente/crear">Registrar</a>
           </li>
           <li class="nav-item " routerLinkActive="active">
-            <a class="collapse-item" routerLink="docente/list">Lista de Docentes</a>
+            <a class="collapse-item" routerLink="docente/list">Lista</a>
           </li>
-          <li class="nav-item " routerLinkActive="active">
-            <a class="collapse-item" routerLink="docente/editar">Editar Docente</a>
+          <li class="nav-item" routerLinkActive="active">
+            <a class="collapse-item" routerLink='docente/asignar'>Asignar Cursos</a>
           </li>
+        <!--   <li class="nav-item " routerLinkActive="active">
+            <a class="collapse-item" routerLink="docente/editar">Editar</a>
+          </li> -->
+          
         </ul>
       </div>
     </div>
   </li>
+
+
+
+
+  <li class="nav-item">
+    <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapseCurso" aria-expanded="true"
+      aria-controls="collapseCurso">
+      <i class="Defaults-arrow-down"></i>
+      <span> CURSOS</span>
+    </a>
+    <div id="collapseCurso" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+      <div class="bg-white py-2 collapse-inner rounded">
+        <h6 class="collapse-header">Docente académico</h6>
+        <!--NAV DE DOCENTES-->
+        <ul class="navbar-nav mr-auto navul">
+          <li class="nav-item" routerLinkActive="active">
+            <a class="collapse-item" routerLink="curso/crear">Registrar</a>
+          </li>
+          <li class="nav-item " routerLinkActive="active">
+            <a class="collapse-item" routerLink="curso/list">Lista</a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </li>
+
+
+
+
+
 
 
   <!-- ALUMNOS -->
@@ -94,18 +129,22 @@
     </a>
     <div id="collapseAlumno" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
       <div class="bg-white py-2 collapse-inner rounded">
-        <h6 class="collapse-header">Alumno académico</h6>
+        <h5 class="collapse-header" style="color: black">Alumno académico</h5>
         <!--NAV DE ALUMNOS-->
         <ul class="navbar-nav mr-auto navul">
           <li class="nav-item" routerLinkActive="active">
-            <a class="collapse-item" routerLink="alumno/crear">Registrar Alumno</a>
+            <a class="collapse-item" routerLink="alumno/crear">Registrar</a>
           </li>
           <li class="nav-item " routerLinkActive="active">
-            <a class="collapse-item" routerLink="alumno/list">Lista de Alumnos</a>
+            <a class="collapse-item" routerLink="alumno/list">Lista</a>
           </li>
           <li class="nav-item " routerLinkActive="active">
+            <a class="collapse-item" routerLink="alumno/matricula">Matricular</a>
+          </li>
+          <!-- <li class="nav-item " routerLinkActive="active">
             <a class="collapse-item" routerLink="alumno/editar">Editar Alumno</a>
-          </li>
+          </li> -->
+          
         </ul>
       </div>
     </div>
@@ -125,21 +164,23 @@
         <!--NAV DE padreS-->
         <ul class="navbar-nav mr-auto navul">
           <li class="nav-item" routerLinkActive="active">
-            <a class="collapse-item" routerLink="padre/crear">Registrar padre</a>
+            <a class="collapse-item" routerLink="padre/crear">Registrar </a>
           </li>
           <li class="nav-item " routerLinkActive="active">
-            <a class="collapse-item" routerLink="padre/list">Lista de padres</a>
+            <a class="collapse-item" routerLink='padre/relacionar'>Parentesco</a>
           </li>
           <li class="nav-item " routerLinkActive="active">
-            <a class="collapse-item" routerLink="padre/editar">Editar padre</a>
+            <a class="collapse-item" routerLink="padre/list">Lista</a>
           </li>
+     <!--      <li class="nav-item " routerLinkActive="active">
+            <a class="collapse-item" routerLink="padre/editar">Editar</a>
+          </li> -->
         </ul>
       </div>
     </div>
   </li>
 
   <!-- PAGOS -->
-
 
   <li class="nav-item">
     <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapsepagos" aria-expanded="true"

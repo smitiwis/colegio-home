@@ -1,0 +1,106 @@
+<div class=" d-flex justify-content-between mx-1">
+  <div class="col-md-3 p-0">
+    <p class="separadores"><span class="Defaults-group"></span> RELACIONAR PARENTESCO</p>
+  </div>
+  <div class="col-md-9 p-0 align-self-end">
+    <hr class="linea_separador">
+  </div>
+</div>
+
+<div class=" row mx-5">
+  <div class="col">
+    <form class="m-4" [formGroup]="formParentesco" (ngSubmit)="guardarParentesco()">
+
+      <div class="form-group row">
+        <div class="col-sm-3">
+          <label for="documento"><span class="Defaults-sort-numeric-asc"></span> DNI - PADRE</label>
+        </div>
+        <div class="col-sm-5">
+          <input required type="text" id="documento" class="form-control" formControlName="dniDocumento"
+            [class.is-valid]="" [class.is-invalid]="" minlength="8" maxlength="8" pattern="[1-9]*">
+        </div>
+        <div class="col-sm-4">
+          <button type="button" class="btn btn-outline-success"><span class="Defaults-search"></span> Buscar</button>
+        </div>
+      </div>
+      <div>
+        <h3>Presentar datos del padre registrado segun el DNI</h3>
+      </div>
+    </form>
+  </div>
+  <div class="col">
+    <form class="m-4" [formGroup]="formParentesco" (ngSubmit)="guardarParentesco()">
+
+      <div class="form-group row">
+        <div class="col-sm-3">
+          <label for="documento"><span class="Defaults-sort-numeric-asc"></span> DNI - ALUMNO</label>
+        </div>
+        <div class="col-sm-5">
+          <input required type="text" id="documento" class="form-control" formControlName="dniDocumento"
+            [class.is-valid]="" [class.is-invalid]="" minlength="8" maxlength="8" pattern="[1-9]*">
+        </div>
+        <div class="col-sm-4">
+          <button type="button" class="btn btn-outline-success"><span class="Defaults-search"></span> Buscar</button>
+        </div>
+      </div>
+      <div>
+        <h3>Presentar datos del alumno registrado segun el DNI</h3>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="row mx-5">
+  <div class="col">
+    <div class=" d-flex justify-content-between">
+      <div class="col-md-3 p-0">
+        <p class="separadores"> <span class="Defaults-user"></span><span class="Defaults-arrows-h"></span><span
+            class="Defaults-user"> </span> PARENTESCO PADRE -> HIJO</p>
+      </div>
+    </div>
+
+    <form [formGroup]="formParentesco" class="mx-5" >
+      <div class="form-group row">
+        <div class="col-sm">
+          <div>
+            <label for="">*Parentesco</label>
+          </div>
+          <div>
+            <select class="custom-select custom-select-lg mb-3">
+              <option selected>Parentesco</option>
+              <option value="padre">Padre</option>
+              <option value="madre">Madre</option>
+              <option value="tio">Tio</option>
+              <option value="tia">Tia</option>
+              <option value="hermano">Hermano</option>
+              <option value="hermana">Hermana</option>
+
+            </select>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div>
+            <label for="">*Responsable de las matriculas y reuniones</label>
+          </div>
+          <div class="mx-3">
+            <div class="form-check">
+              <input class="form-check-input" name="esResponsable" type="radio" value="si" checked>
+              <p class="form-check-label" for="exampleRadios1">Si</p>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" name="esResponsable" type="radio" value="no">
+              <p class="form-check-label" for="exampleRadios2">No</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="row">
+        <div class="col-sm-5 text-center">
+          <button class="btn btn-success btn-block py-3">Guardar</button>
+        </div>
+      </div>
+    </form>
+
+  </div>
+</div>

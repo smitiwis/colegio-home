@@ -1,0 +1,112 @@
+<div class=" d-flex justify-content-between mx-1">
+  <div class="col-md-3 p-0">
+    <p class="separadores"><span class="Defaults-list-alt"></span> MATRICULAR ALUMNO</p>
+  </div>
+  <div class="col-md-9 p-0 align-self-end">
+    <hr class="linea_separador">
+  </div>
+</div>
+
+<div class=" row mx-5">
+
+  <div class="col-sm-5">
+    <form class="m-4" [formGroup]="formAlumnoMatricula" (ngSubmit)="matricularAlumno()">
+
+      <div class="form-group row">
+        <div class="col-sm-4">
+          <label for="documento"><span class="Defaults-sort-numeric-asc"></span> DNI - ALUMNO</label>
+        </div>
+        <div class="col-sm-4">
+          <input required type="text" id="documento" class="form-control" formControlName="dniDocumento"
+            [class.is-valid]="" [class.is-invalid]="" minlength="8" maxlength="8" pattern="[1-9]*">
+        </div>
+        <div class="col-sm-4">
+          <button type="button" class="btn btn-outline-success"><span class="Defaults-search"></span> Buscar</button>
+        </div>
+      </div>
+
+      <div>
+        <h3>Presentar datos del alumno registrado segun el DNI</h3>
+      </div>
+    </form>
+  </div>
+
+
+  <div class="col-sm-7">
+    <div class="my-3">
+      <h3>DATOS DE MATRÍCULA</h3>
+    </div>
+    <form [formGroup]="formAlumnoMatricula">
+      <div class="row">
+        <div class="col-sm">
+          <div>
+            <label for="">Periodo académico:</label>
+          </div>
+          <div>
+            <select class="custom-select custom-select-lg mb-3">
+              <option selected>Periodo</option>
+              <option value="1">2020</option>
+              <option value="2">2021</option>
+              <option value="3">2022</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div>
+            <label for="">Nivel académico:</label>
+          </div>
+          <div>
+            <select class="custom-select custom-select-lg mb-3">
+              <option selected>Nivel</option>
+              <option value="1">Inical</option>
+              <option value="2">Primaria</option>
+              <option value="3">Secundaria</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+
+        <div class="col-sm">
+          <div>
+            <label for="">Nivel académico:</label>
+          </div>
+          <div>
+            <select class="custom-select custom-select-lg mb-3">
+              <option selected>Nivel</option>
+              <option value="1">primero</option>
+              <option value="2">Segundo</option>
+              <option value="3">Tercero</option>
+              <option value="3">Cuarto</option>
+              <option value="3">Quinto</option>
+              <option value="3">Sexto</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div>
+            <label for="">Sección académico:</label>
+          </div>
+          <div>
+            <select class="custom-select custom-select-lg mb-3">
+              <option selected>Sección</option>
+              <option value="1">A</option>
+              <option value="2">B</option>
+              <option value="3">C</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <button type="button" class="btn btn-outline-primary btn-block py-3">MATRICULAR</button>
+        </div>
+      </div>
+
+
+    </form>
+  </div>
+
+</div>
