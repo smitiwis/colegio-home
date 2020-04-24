@@ -1,26 +1,81 @@
-<form>
-  <div class="form-group row">
-    <div class="col-sm-6 mb-3 mb-sm-0">
-      <label for=""><b>Nombre del periodo académico</b></label>
-      <input type="text" class="form-control">
-    </div>
+<div class=" d-flex justify-content-between mx-1">
+  <div class="col-md-3 p-0">
+    <p class="separadores"><span class="Defaults-dropbox"></span> REGISTRAR NUEVO PERIODO</p>
   </div>
-<!-- <div class="form-group row">
-<div class="col-sm-6 mb-3 mb-sm-0">
-  <label for=""><b>Nivel de estudio</b></label>
-  <select class="custom-select custom-select-lg mb-3">
-    <option value="inicial">Inicial</option>
-    <option value="primaria">Primaria</option>
-    <option value="secundaria">Secundaria</option>
-  </select>
+  <div class="col-md-9 p-0 align-self-end">
+    <hr class="linea_separador">
+  </div>
 </div>
-</div> -->
+
+<form class="m-4" [formGroup]="formPeriod" (ngSubmit)="crearPeriod();">
+
+  <a class="btn btn-success mb-4" routerLink="periodos/list">
+    <span class="Defaults-list-alt"></span> Lista de Padres
+  </a>
+
+
   <div class="form-group row">
-    <div class="col-sm-3 text-center">
-      <button class="btn btn-primary btn-block">Crear</button>
-    </div>
-    <div class="col-sm-3 text-center">
-      <a class="btn btn-danger btn-block" routerLink="/admin/periodos">Cancelar</a>
+    <label for="documento" class="col-sm-2">*Nombre del Periodo:</label>
+    <div class="col-sm-4">
+      <input required type="text" id="documento" class="form-control" formControlName="nombrePeriod"
+        [class.is-valid]="nombrePeriodValid" [class.is-invalid]="nombrePeriodInvalid">
+      <p class="Defaults-times-circle text-danger mt-2" *ngIf="">
+        <span>
+          Nombre del periodo es requerido.
+        </span>
+      </p>
     </div>
   </div>
+
+  <div class=" d-flex justify-content-between mx-1">
+    <div class="col-md-3 p-0">
+      <p class="separadores"><span class="Defaults-check"></span> ASIGNAR BIMESTRES AL PERIODO</p>
+    </div>
+  </div>
+
+  <div class="form-group row mt-3">
+    <div class="col-sm-2">
+      <label for="nombre" class="col-form-label">*Bimestres ?</label>
+    </div>
+    <div class="col-sm-4">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="BIMESTRE I" formControlName="bimestre1Period"
+          [class.is-valid]="bimestre1PeriodValid" [class.is-invalid]="bimestre1PeriodInvalid">
+        <p class="form-check-label" for="defaultCheck1">
+          BIMESTRE I
+        </p>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="BIMESTRE II" formControlName="bimestre2Period"
+          [class.is-valid]="bimestre2PeriodValid" [class.is-invalid]="bimestre2PeriodInvalid">
+        <p class="form-check-label" for="defaultCheck2">
+          BIMESTRE II
+        </p>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="BIMESTRE III" formControlName="bimestre3Period"
+          [class.is-valid]="bimestre3PeriodValid" [class.is-invalid]="bimestre3PeriodInvalid">
+        <p class="form-check-label" for="defaultCheck1">
+          BIMESTRE III
+        </p>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="BIMESTRE IV" formControlName="bimestre4Period"
+          [class.is-valid]="bimestre4PeriodValid" [class.is-invalid]="bimestre4PeriodInvalid">
+        <p class="form-check-label" for="defaultCheck2">
+          BIMESTRE IV
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+  <div class="form-group row">
+    <div class="col-sm-6">
+      <button class="btn btn-primary btn-block">Registrar periodo</button>
+    </div>
+  </div>
+  <pre>
+    {{ formPeriod.value | json}}
+    </pre>
 </form>

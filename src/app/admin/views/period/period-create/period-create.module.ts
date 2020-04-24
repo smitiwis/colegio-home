@@ -1,13 +1,18 @@
 import { NgModule } from '@angular/core';
-import { PeriodCreateComponent } from './preiod-create.component';
+import { PeriodCreateComponent } from './period-create.component';
 import { PeriodCreateRoutingModule } from './period-create-routing.module';
+import { ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
     PeriodCreateComponent,
   ],
   imports: [
-    PeriodCreateRoutingModule
+    CommonModule,
+    PeriodCreateRoutingModule,
+    ReactiveFormsModule,
+
   ],
   bootstrap: [PeriodCreateComponent],
   exports: [PeriodCreateComponent]

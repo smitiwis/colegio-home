@@ -19,7 +19,7 @@ export class PeriodListComponent implements OnInit {
 
 
   setPage(pageInfo) {
-    console.log(pageInfo)
+    // console.log(pageInfo)
     this.page.pageNumber = pageInfo.offset;
     setTimeout(() => {
       this.page.totalElements = 100;

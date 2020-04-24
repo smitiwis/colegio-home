@@ -46,6 +46,10 @@ const routes: Routes = [
         loadChildren: '../admin/views/period/period-create/period-create.module#PeriodCreateModule'
       },
       {
+        path: 'periodos/bimestre/crear',
+        loadChildren: '../admin/views/period/bimestre/bimestre-create/bimestre-create.module#BimestreCreateModule'
+      },
+      {
         // path: 'periodos/editar/:id',
         path: 'periodos/editar',
         loadChildren: '../admin/views/period/period-edit/period-edit.module#PeriodEditModule',
