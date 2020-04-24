@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 export class MenuComponent implements OnInit {
 
   constructor() { }
-
+  icono: any = "<i class='Defaults-circle' style = 'color: black; font-size: 10px;' > </i>"
   ngOnInit() {
   }
 

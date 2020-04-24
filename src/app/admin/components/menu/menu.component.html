@@ -29,8 +29,8 @@
   <li class="nav-item">
     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePeriodo" aria-expanded="true"
       aria-controls="collapsePeriodo">
-      <i class="Defaults-arrow-down"></i>
-      <span>PERIODO</span>
+      <desglose></desglose>
+      <span> PERIODO</span>
     </a>
 
     <div id="collapsePeriodo" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
@@ -40,19 +40,21 @@
 
         <ul class="navbar-nav mr-auto navul">
           <li class="nav-item" routerLinkActive="active">
-            <a class="collapse-item" routerLink="periodos/crear"><i class="Defaults-circle"
-                style="color: black; font-size: 10px;"></i> Registrar</a>
+            <a class="collapse-item" routerLink="periodos/crear">
+              <recurso></recurso> Registrar
+            </a>
           </li>
           <li class="nav-item" routerLinkActive="active">
 
-            <a class="collapse-item" routerLink="periodos/list"><i class="Defaults-circle"
-                style="color: black; font-size: 10px;"></i> Lista</a>
+            <a class="collapse-item" routerLink="periodos/list">
+              <recurso></recurso> Lista
+            </a>
           </li>
-        
+
           <li class="nav-item">
             <a style="width: 160px;" class="nav-link collapse-item collapsed" href="#" data-toggle="collapse"
               data-target="#collapseBimestre" aria-expanded="false" aria-controls="collapseBimestre">
-              <i class="Defaults-arrow-down" style="color: black;"></i>
+              <i class="Defaults-hand-o-down" style="color: black; font-size: 15px;"></i>
               <span>Bimestre</span>
             </a>
             <!-- <div id="collapseBimestre" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar"> -->
@@ -61,17 +63,20 @@
                 <!--PERIODO - BIMESTRE-->
                 <ul class="navbar-nav mr-auto navul">
                   <li class="nav-item" routerLinkActive="active">
-                    <a style="color: black;" class="collapse-item" routerLink="periodos/bimestre/crear"><i
-                        class="Defaults-circle" style="color: black; font-size: 10px;"></i> Registrar</a>
-                        
+                    <a style="color: black;" class="collapse-item" routerLink="periodos/bimestre/crear">
+                      <recurso></recurso> Registrar
+                    </a>
+
                   </li>
                   <li class="nav-item" routerLinkActive="active">
-                    <a style="color: black;" class="collapse-item" routerLink="periodos/bimestre/list"><i
-                        class="Defaults-circle" style="color: black; font-size: 10px;"></i> Lista</a>
+                    <a style="color: black;" class="collapse-item" routerLink="periodos/bimestre/list">
+                      <recurso></recurso> Lista
+                    </a>
                   </li>
                   <li class="nav-item" routerLinkActive="active">
-                    <a style="color: black;" class="collapse-item" routerLink="periodos/bimestre/edit"><i
-                        class="Defaults-circle" style="color: black; font-size: 10px;"></i> Actualizar</a>
+                    <a style="color: black;" class="collapse-item" routerLink="periodos/bimestre/editar">
+                      <recurso></recurso> Actualizar
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -79,8 +84,9 @@
           </li>
 
           <li class="nav-item" routerLinkActive="active">
-            <a class="collapse-item" routerLink="periodos/asignar"><i class="Defaults-circle"
-                style="color: black; font-size: 10px;"></i> Asignar Bimest</a>
+            <a class="collapse-item" routerLink="periodos/asignar">
+              <recurso></recurso> Asignar Bimest
+            </a>
           </li>
         </ul>
 
@@ -95,7 +101,7 @@
   <li class="nav-item">
     <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapseDocente" aria-expanded="true"
       aria-controls="collapseDocente">
-      <i class="Defaults-arrow-down"></i>
+      <desglose></desglose>
       <span> DOCENTES</span>
     </a>
     <div id="collapseDocente" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
@@ -104,18 +110,50 @@
         <!--NAV DE DOCENTES-->
         <ul class="navbar-nav mr-auto navul">
           <li class="nav-item" routerLinkActive="active">
-            <a class="collapse-item" routerLink="docente/crear">Registrar</a>
+            <a class="collapse-item" routerLink="docente/crear">
+              <recurso></recurso> Registrar
+            </a>
           </li>
           <li class="nav-item " routerLinkActive="active">
-            <a class="collapse-item" routerLink="docente/list">Lista</a>
+            <a class="collapse-item" routerLink="docente/list">
+              <recurso></recurso> Lista
+            </a>
           </li>
           <li class="nav-item" routerLinkActive="active">
-            <a class="collapse-item" routerLink='docente/asignar'>Asignar Cursos</a>
+            <a class="collapse-item" routerLink='docente/asignar'>
+              <recurso></recurso> Asignar Cursos
+            </a>
           </li>
           <!--   <li class="nav-item " routerLinkActive="active">
             <a class="collapse-item" routerLink="docente/editar">Editar</a>
           </li> -->
 
+          <li class="nav-item">
+            <a style="width: 160px;" class="nav-link collapse-item collapsed" href="#" data-toggle="collapse"
+              data-target="#collapseCalificaciones" aria-expanded="false" aria-controls="collapseCalificaciones">
+              <i class="Defaults-hand-o-down" style="color: black; font-size: 15px;"></i>
+              <span>CALIFICACIONES</span>
+            </a>
+            <!-- <div id="collapseCalificaciones" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar"> -->
+            <div id="collapseCalificaciones" class="collapse">
+              <div class="bg-white py-2 collapse-inner rounded">
+                <!-- NOTAS REGISTRAR-->
+                <ul class="navbar-nav mr-auto navul">
+                  <li class="nav-item" routerLinkActive="active">
+                    <a style="color: black;" class="collapse-item" routerLink="docente/nota/regist">
+                      <recurso></recurso> Registrar Notas
+                    </a>
+
+                  </li>
+                  <li class="nav-item" routerLinkActive="active">
+                    <a style="color: black;" class="collapse-item" routerLink="periodos/notas/####">
+                      <recurso></recurso> ###########
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
         </ul>
       </div>
     </div>
@@ -125,7 +163,7 @@
   <li class="nav-item">
     <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapseCurso" aria-expanded="true"
       aria-controls="collapseCurso">
-      <i class="Defaults-arrow-down"></i>
+      <desglose></desglose>
       <span> CURSOS</span>
     </a>
     <div id="collapseCurso" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
@@ -134,10 +172,14 @@
         <!--NAV DE DOCENTES-->
         <ul class="navbar-nav mr-auto navul">
           <li class="nav-item" routerLinkActive="active">
-            <a class="collapse-item" routerLink="curso/crear">Registrar</a>
+            <a class="collapse-item" routerLink="curso/crear">
+              <recurso></recurso> Registrar
+            </a>
           </li>
           <li class="nav-item " routerLinkActive="active">
-            <a class="collapse-item" routerLink="curso/list">Lista</a>
+            <a class="collapse-item" routerLink="curso/list">
+              <recurso></recurso> Lista
+            </a>
           </li>
 
         </ul>
@@ -149,8 +191,8 @@
   <li class="nav-item">
     <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapseAlumno" aria-expanded="true"
       aria-controls="collapseAlumno">
-      <i class="Defaults-arrow-down"></i>
-      <span>ALUMNOS</span>
+      <desglose></desglose>
+      <span> ALUMNOS</span>
     </a>
     <div id="collapseAlumno" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
       <div class="bg-white py-2 collapse-inner rounded">
@@ -158,13 +200,19 @@
         <!--NAV DE ALUMNOS-->
         <ul class="navbar-nav mr-auto navul">
           <li class="nav-item" routerLinkActive="active">
-            <a class="collapse-item" routerLink="alumno/crear">Registrar</a>
+            <a class="collapse-item" routerLink="alumno/crear">
+              <recurso></recurso> Registrar
+            </a>
           </li>
           <li class="nav-item " routerLinkActive="active">
-            <a class="collapse-item" routerLink="alumno/list">Lista</a>
+            <a class="collapse-item" routerLink="alumno/list">
+              <recurso></recurso> Lista
+            </a>
           </li>
           <li class="nav-item " routerLinkActive="active">
-            <a class="collapse-item" routerLink="alumno/matricula">Matricular</a>
+            <a class="collapse-item" routerLink="alumno/matricula">
+              <recurso></recurso> Matricular
+            </a>
           </li>
           <!-- <li class="nav-item " routerLinkActive="active">
             <a class="collapse-item" routerLink="alumno/editar">Editar Alumno</a>
@@ -179,8 +227,8 @@
   <li class="nav-item">
     <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapsepadre" aria-expanded="true"
       aria-controls="collapsepadre">
-      <i class="Defaults-arrow-down"></i>
-      <span>PADRES</span>
+      <desglose></desglose>
+      <span> PADRES</span>
     </a>
     <div id="collapsepadre" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
       <div class="bg-white py-2 collapse-inner rounded">
@@ -188,13 +236,19 @@
         <!--NAV DE padreS-->
         <ul class="navbar-nav mr-auto navul">
           <li class="nav-item" routerLinkActive="active">
-            <a class="collapse-item" routerLink="padre/crear">Registrar </a>
+            <a class="collapse-item" routerLink="padre/crear">
+              <recurso></recurso> Registrar
+            </a>
           </li>
           <li class="nav-item " routerLinkActive="active">
-            <a class="collapse-item" routerLink='padre/relacionar'>Parentesco</a>
+            <a class="collapse-item" routerLink='padre/relacionar'>
+              <recurso></recurso> Parentesco
+            </a>
           </li>
           <li class="nav-item " routerLinkActive="active">
-            <a class="collapse-item" routerLink="padre/list">Lista</a>
+            <a class="collapse-item" routerLink="padre/list">
+              <recurso></recurso> Lista
+            </a>
           </li>
           <!--      <li class="nav-item " routerLinkActive="active">
             <a class="collapse-item" routerLink="padre/editar">Editar</a>
@@ -209,8 +263,8 @@
   <li class="nav-item">
     <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapsepagos" aria-expanded="true"
       aria-controls="collapsepagos">
-      <i class="Defaults-arrow-down"></i>
-      <span>PAGOS</span>
+      <desglose></desglose>
+      <span> PAGOS</span>
     </a>
     <div id="collapsepagos" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
       <div class="bg-white py-2 collapse-inner rounded">
@@ -218,13 +272,14 @@
         <!--NAV DE padreS-->
         <ul class="navbar-nav mr-auto navul">
           <li class="nav-item" routerLinkActive="active">
-            <a class="collapse-item" routerLink="pago/registrar">Subir facturacion</a>
+            <a class="collapse-item" routerLink="pago/registrar">
+              <recurso></recurso> Subir facturacion
+            </a>
           </li>
         </ul>
       </div>
     </div>
   </li>
-
 
 
 
@@ -240,7 +295,7 @@
   <li class="nav-item">
     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePagos" aria-expanded="tru e"
       aria-controls="collapsePagos">
-      <i class="Defaults-arrow-down"></i>
+      <desglose></desglose>
       <span>############</span>
     </a>
     <div id="collapsePagos" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">

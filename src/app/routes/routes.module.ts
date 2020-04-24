@@ -25,7 +25,7 @@ const routes: Routes = [
       {
         path: 'nosotros',
         loadChildren: '../landing/views/nosotros/nosotros.module#NosotrosModule',
-  
+
       }
     ]
   },
@@ -49,9 +49,18 @@ const routes: Routes = [
         path: 'periodos/asignar',
         loadChildren: '../admin/views/period/period-asignar/period-asignar.module#PeriodAsignarModule'
       },
+      // PERIODO - BIMESTRES
       {
         path: 'periodos/bimestre/crear',
         loadChildren: '../admin/views/period/bimestre/bimestre-create/bimestre-create.module#BimestreCreateModule'
+      },
+      {
+        path: 'periodos/bimestre/editar',
+        loadChildren: '../admin/views/period/bimestre/bimestre-edit/bimestre-edit.module#BimestreEditModule'
+      },
+      {
+        path: 'periodos/bimestre/list',
+        loadChildren: '../admin/views/period/bimestre/bimestre-list/bimestre-list.module#BimestreListModule'
       },
       {
         // path: 'periodos/editar/:id',
@@ -100,6 +109,11 @@ const routes: Routes = [
         path: 'docente/asignar',
         loadChildren: '../admin/views/docentes/docentes-asignar-curso/docentes-asignar-curso.module#DocentesAsignarCursoModule',
       },
+      //DOCENTES - REGISTRAR NOTAS
+      {
+        path: 'docente/nota/regist',
+        loadChildren: '../admin/views/docentes/notas/notas-registrar/notas-registrar.module#NotasRegistrarModule'
+      },
       {
         // path: 'docente/editar/:id',
         path: 'docente/editar',
@@ -107,7 +121,7 @@ const routes: Routes = [
         pathMatch: 'prefix'
       },
 
-      
+
 
 
       // RUTAS PADRES
@@ -150,22 +164,22 @@ const routes: Routes = [
 
 
       //RUTAS DE PAGOS
-        {
-          path: 'pago',
-          loadChildren:'../admin/views/pagos/pago.module#PagoModule'
-        },
-        {
-          path:'pago/registrar',
+      {
+        path: 'pago',
+        loadChildren: '../admin/views/pagos/pago.module#PagoModule'
+      },
+      {
+        path: 'pago/registrar',
         loadChildren: '../admin/views/pagos/pago-registrar/pago-registrar.module#PagoRegistrarModule'
-          
-        }
+
+      }
 
 
 
 
     ],
   }
-  
+
 ];
 
 @NgModule({
