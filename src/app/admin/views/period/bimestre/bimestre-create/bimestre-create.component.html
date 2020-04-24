@@ -1,1 +1,59 @@
-<h3>Crear un bimestre</h3>
+<div class=" d-flex justify-content-between mx-1">
+  <div class="col-md-3 p-0">
+    <p class="separadores"><span class="Defaults-briefcase"></span> REGISTRAR NUEVO BIMESTRE</p>
+  </div>
+  <div class="col-md-9 p-0 align-self-end">
+    <hr class="linea_separador">
+  </div>
+</div>
+
+<form class="m-4">
+
+  <a class="btn btn-success mb-4" routerLink="bimestre/list">
+    <span class="Defaults-list-alt"></span> Lista de Bimestres
+  </a>
+
+
+  <div class="form-group row">
+    <label for="documento" class="col-sm-2">*Nombre del Bimestre:</label>
+    <div class="col-sm-4">
+      <input required type="text" id="" class="form-control" formControlName="nombreBim" [class.is-valid]=""
+        [class.is-invalid]="">
+      <p class="Defaults-times-circle text-danger mt-2" *ngIf="">
+        <span>
+          Nombre del bimestre es requerido.
+        </span>
+      </p>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="fecha-nac" class="col-sm-2">*Fecha de Inicio:</label>
+    <div class="col-sm-4">
+      <input required type="date" id="fecha-ini" class="form-control" formControlName="fechaIni" [class.is-valid]=""
+        [class.is-invalid]="">
+      <samp class="Defaults-times-circle text-danger mt-2" *ngIf=""> Fecha de Inicio es requerida</samp>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-sm-2">*Fecha de Culminación:</label>
+    <div class="col-sm-4">
+      <input required type="date" id="fecha-fin" class="form-control" formControlName="fechaFin" [class.is-valid]=""
+        [class.is-invalid]="">
+      <samp class="Defaults-times-circle text-danger mt-2" *ngIf=""> Fecha culminación es requerida</samp>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-sm-2">Estado del Bimestre: </label>
+    <div class="col-sm-4">
+      <div class="col-sm-4 custom-control custom-checkbox mb-3">
+        <input type="checkbox" class="custom-control-input" id="activBimes" formControlName="estadoBimestre"
+          [class.is-valid]="" [class.is-invalid]="">
+        <label class="custom-control-label" for="activBimes"></label>
+      </div>
+    </div>
+
+  </div>
+
+
+
+</form>
